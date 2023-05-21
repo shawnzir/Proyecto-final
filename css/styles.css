@@ -7,7 +7,7 @@ body {
   padding: 0;
   width: 100%;
   font-size: 1rem;
-}
+
 
 li {
     list-style: none;
@@ -87,85 +87,8 @@ nav ul li a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*desde aca*/
-ul.albmdrake{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;  
-    justify-content: space-around;
-    align-items: stretch;
-    
-}
-
-ul.albmdrake li img{
-    height: 130px;
-}
-
-ul.albmdrake li h2{
-   text-align: start; 
-   font-size: 30px;
-}
-
-.albminfo{
-    display: flex;
-    flex-wrap:wrap ;
-    flex-direction: row;
-    font-size: 20px;
-}
-.albmft{
-    list-style: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*hasta aca*/
+=======
 
 
 
@@ -262,3 +185,5 @@ footer {
   footer ul li {
     list-style-type: none;
   }
+>>>>>>> bd770129d3781c2f6d4b30533b524d4c52973aa8
+>>>>>>> 434478139c390294d5357bdbb37a5ca7246170ae
