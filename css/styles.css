@@ -1,7 +1,9 @@
+<<<<<<< HEAD
 body{
     background-color: grey;
 }
 
+<<<<<<< HEAD
 li {
 list-style: none;
 
@@ -67,3 +69,224 @@ nav ul li .buscador{
 
 
 /*header*/
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*desde aca*/
+ul.albmdrake{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;  
+    justify-content: space-around;
+    align-items: stretch;
+    
+}
+
+ul.albmdrake li img{
+    height: 130px;
+}
+
+ul.albmdrake li h2{
+   text-align: start; 
+   font-size: 30px;
+}
+
+.albminfo{
+    display: flex;
+    flex-wrap:wrap ;
+    flex-direction: row;
+    font-size: 20px;
+}
+.albmft{
+    list-style: none;
+}
+
+=======
+*{box-sizing: border-box;}
+
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+>>>>>>> bd770129d3781c2f6d4b30533b524d4c52973aa8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+/*hasta aca*/
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    min-height: 200px;
+    width: 100%;
+    -webkit-box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
+     box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
+  }
+  footer ul {
+    margin: 0 15%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: space-between ;
+  }
+
+  footer ul li {
+    /* ESTILOS. */
+    background-color: gainsboro;
+    width: 170px;
+    margin:15px 0px;
+    border: 1px;
+    padding:10px 20px;  
+    font-size: 24px;
+    font-weight: bold;
+  }
+  footer a {
+    text-decoration: none;
+  }
+  footer ul li {
+    list-style-type: none;
+  }
+>>>>>>> bd770129d3781c2f6d4b30533b524d4c52973aa8
+>>>>>>> 434478139c390294d5357bdbb37a5ca7246170ae
