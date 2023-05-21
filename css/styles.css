@@ -1,23 +1,28 @@
-<<<<<<< HEAD
-body{
-    background-color: grey;
+/*CSS GENERAL*/
+*{box-sizing: border-box;}
+
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1rem;
 }
 
-<<<<<<< HEAD
 li {
-list-style: none;
-
+    list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
 /*header*/
-
 
 header nav {
     background-color: #f3f5f8;
     position: fixed;
     width: 100%;
     height: 60px;
-    
   }
   
   nav ul {
@@ -34,17 +39,14 @@ header nav {
     margin: 0;
     padding: 15px 12px 0 12px;
     float: left;
-    
-   
-    
     font-size: 1.5rem;
     height: 60px;
   }
+
   nav ul li a {
     color: black;
   }
   nav ul li.logo {
-   
     background-image:url("../img/logofinal.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -54,23 +56,16 @@ header nav {
     margin-left: 10px;
   }
   
-  nav ul li a {
-    text-decoration: none;
+nav ul li a {
     color: black;
-  }
+}
  
 
-nav ul li .buscador{
-
+.buscador{
     margin-left: 1110px;     
 }
   
-
-
-
 /*header*/
-=======
-
 
 
 
@@ -149,25 +144,6 @@ ul.albmdrake li h2{
     list-style: none;
 }
 
-=======
-*{box-sizing: border-box;}
-
-body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  width: 100%;
-  font-size: 1rem;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
->>>>>>> bd770129d3781c2f6d4b30533b524d4c52973aa8
 
 
 
@@ -189,9 +165,7 @@ a {
 
 
 
-<<<<<<< HEAD
 /*hasta aca*/
-=======
 
 
 
@@ -288,5 +262,3 @@ footer {
   footer ul li {
     list-style-type: none;
   }
->>>>>>> bd770129d3781c2f6d4b30533b524d4c52973aa8
->>>>>>> 434478139c390294d5357bdbb37a5ca7246170ae
