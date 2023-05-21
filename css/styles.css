@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 body{
     background-color: grey;
 }
-
+6
 
 
 
@@ -82,7 +82,7 @@ ul.albmdrake li h2{
     list-style: none;
 }
 
-=======
+/*HASTA ACA*/
 *{box-sizing: border-box;}
 
 body {
@@ -100,7 +100,6 @@ li {
 a {
     text-decoration: none;
 }
->>>>>>> bd770129d3781c2f6d4b30533b524d4c52973aa8
 
 
 
@@ -116,15 +115,8 @@ a {
 
 
 
-
-
-
-
-
-
-<<<<<<< HEAD
 /*hasta aca*/
-=======
+
 
 
 
@@ -221,4 +213,4 @@ footer {
   footer ul li {
     list-style-type: none;
   }
->>>>>>> bd770129d3781c2f6d4b30533b524d4c52973aa8
+
