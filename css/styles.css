@@ -7,6 +7,7 @@ body {
   padding: 0;
   width: 100%;
   font-size: 1rem;
+  background-color: grey;
 }
 
 li {
