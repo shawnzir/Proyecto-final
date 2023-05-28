@@ -13,6 +13,10 @@ li {
 list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*HEADER*/
 header nav {
     background-color: #f3f5f8;
@@ -35,14 +39,13 @@ header nav {
     margin: 0;
     padding: 15px 12px 0 12px;
     float: left;
-    
-   
-    
     font-size: 1.5rem;
     height: 60px;
   }
   nav ul li a {
     color: black;
+    font-weight: bold;
+    text-decoration: none;
   }
   nav ul li.logo {
     background-image:url("../img/logofinal.png");
@@ -53,18 +56,11 @@ header nav {
     width: 160px;
     margin-left: 10px;
   }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: black;
-  }
  
 
 nav ul li .buscador{
     margin-left: 600px;     
 }
-  
-
 /*HEADER*/
 
 
@@ -98,23 +94,7 @@ ul.albmdrake li h2{
 }
 
 /*HASTA ACA*/
-*{box-sizing: border-box;}
 
-body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  width: 100%;
-  font-size: 1rem;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
 
 
 /*FOOTER*/
