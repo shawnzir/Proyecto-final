@@ -18,6 +18,12 @@ a {
 }
 
 /*HEADER*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 header nav {
     background-color: #f3f5f8;
     position: fixed;
@@ -63,6 +69,14 @@ nav ul li .buscador{
 }
 /*HEADER*/
 
+/*CONTENIDO*/
+.content {
+  margin-top: 100px;
+  display: flexbox;
+}
+
+
+/*CONTENIDO*/
 
 /*desde aca*/
 ul.albmdrake{
