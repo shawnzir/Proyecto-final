@@ -20,6 +20,9 @@ a {
 /*HEADER*/
 header {
   position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  
   top: 0;
   width: 100%;
 }
@@ -64,8 +67,8 @@ header nav {
   }
  
 
-nav ul li .buscador{
-    margin-left: 600px;     
+.ul-menu-arriba{
+ margin-left: 190px;   
 }
 /*HEADER*/
 
@@ -162,3 +165,85 @@ footer ul li {
   list-style-type: none;
 }
 /* FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+
+/* media quris*/
+
+
+/*ipad*/
+@media (max-width: 768px) {
+
+  footer ul {
+    margin: 0 2%;
+    
+  
+}
+
+}
+
+/*ipad*/
+
+
+
+/*telefono*/
+@media (max-width: 480px) {
+
+/*falta terminar*/
+
+  /*header nav {
+
+display: flex;
+width: 100%;
+height: 60px;
+
+
+  }
+
+  }
+  header ul {
+
+margin: 0 140px;
+
+*/
+  }
+
+  
+
+  
+
+  footer ul {
+    margin: 0 2%;
+    flex-direction: column;
+    align-content: space-around;
+    
+}
+
+
+
+footer ul li {
+  background-color: gainsboro;
+  width: 440px;
+  margin: 15px 0px;
+  border: 1px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+
+
+}
+
+
+/*telefono*/
+
+
+/*media queris*/
