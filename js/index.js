@@ -5,3 +5,6 @@ window.onload = function() {
 
     console.log(queryString);
 }
+
+
+  
