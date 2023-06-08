@@ -10,10 +10,13 @@ window.onload = function() {
 
         for(let i = 1; i < informacion.data.length; i++){
 
-            let gif = "<h3>" + informacion.data[i].name + "</h3>";
-            gif += "<img src=" + informacion.data[i].picture + ">"
+            let genre = "<h2>" + informacion.data[i].name + "</h2>";
+            genre += "<img src=" + informacion.data[i].picture_big + ">"
 
-            document.querySelector(".content").innerHTML += "<article>" + gif + "</article>"
+            document.querySelector(".content").innerHTML += "<article>" + genre + "</article>"
         }
+    })
+    .catch(function(error) {
+        console.log("Error:", error);
     })
 }
