@@ -97,32 +97,12 @@ img {
 /*CONTENIDO*/
 
 /*desde aca*/
-ul.albmdrake{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;  
-    justify-content: space-around;
-    align-items: stretch;
-    
-}
-
-ul.albmdrake li img{
-    height: 130px;
-}
-
-ul.albmdrake li h2{
-   text-align: start; 
-   font-size: 30px;
-}
-
-.albminfo{
-    display: flex;
-    flex-wrap:wrap ;
-    flex-direction: row;
-    font-size: 20px;
-}
-.albmft{
-    list-style: none;
+.contenedor {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 /*HASTA ACA*/
