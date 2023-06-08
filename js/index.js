@@ -8,3 +8,19 @@ window.onload = function() {
 
 
   
+let Letrita = document.querySelector("a")
+
+
+Letrita.addEventListener('mouseover', function() {
+
+    Letrita.style.color = 'blue'
+  });
+
+
+
+Letrita.addEventListener('mouseout', function(e) {
+
+    Letrita.style.color = 'black'
+});
+
+console.log()
