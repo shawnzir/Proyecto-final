@@ -74,12 +74,17 @@ header nav {
 
 /*CONTENIDO*/
 .content {
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.content0 {
   margin-top: 80px;
 }
+
 
 /* Puse un display flex para mejorar un poco la estetica de la section. Wrap para que se vea todo en el mismo plano. y Space-evenly para que no este todo pegado. */
 
