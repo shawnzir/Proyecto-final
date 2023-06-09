@@ -92,6 +92,15 @@ header nav {
   justify-content: space-evenly;
 }
 
+.contsongs{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
 .titleArtists {
   text-align: center;
   margin-top: 100px;
