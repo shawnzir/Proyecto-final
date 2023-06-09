@@ -65,30 +65,16 @@ if(inputdebusqueda.value.length < 2){
 })
 
 
-let urlm = "" //poner url
+let urlalbum = "https://api.deezer.com/album/302127" 
 
-fetch(urlm)
+fetch(urlalbum)
 .then(function (response) {
     return response.json()
 })
 
 .then(function (data){
 
-    let packcanciones= data.track.data;
-    console.log(packcanciones)
+    
 
- //   let listadecanciones= document.querySelector(".secanciones")
- //   let canciones = ""
- //   for(let i=0; i< 5; i++){
-//
-//        canciones += `<article class="bloque-canciones">
-//        <h3> <a class="nombrecancion" href=""></a>Nombre cancion</h3>
-//    <img src="" alt="">
-//    <article class="bl-nombrec">
-//    <a href="">Nombre album</a>
-//    <a href="">Nombre artista</a>
-//    </article>
-//    </article>`
-//    }
     
 })
