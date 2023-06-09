@@ -73,5 +73,5 @@ artistas.addEventListener('mouseout', function() {
     })
     .catch(function(error) {
         console.log("Error:", error);
-    });
+    })
 

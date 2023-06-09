@@ -68,10 +68,10 @@ artistas.addEventListener('mouseout', function() {
 
         for(let i = 1; i < informacion.data.length; i++){
 
-            let genre = "<h2>" + informacion.data[i].name + "</h2>";
-            genre += "<img src=" + informacion.data[i].picture_big + ">"
+            let genre ="<a href='./detail-genres.html'>"+ "<h2>" + informacion.data[i].name + "</h2>"+"</a>";
+            genre += "<a href='./detail-genres.html'>"+"<img src=" + informacion.data[i].picture_big + ">"+"</a>"
 
-            document.querySelector(".content").innerHTML += "<article>" + genre + "</article>"
+            document.querySelector(".content").innerHTML += "<article class='data'>" + genre + "</article>"
         }
     })
     .catch(function(error) {
