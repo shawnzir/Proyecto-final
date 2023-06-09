@@ -114,9 +114,35 @@ article {
   margin: 0px 10px;
 }
 
+
+
+
+
 img {
   width: 100%;
 }
+
+/*generos*/
+
+.titulo-de-gen{
+
+  font-size: 100px;
+  background-color: #CDCAC8;
+  margin: 0px 400px;
+  border-radius: 100px;
+
+}
+
+
+.data{
+  
+  background-color: #CDCAC8 ;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+
 
 
 

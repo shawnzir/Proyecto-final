@@ -1,4 +1,4 @@
-window.onload = function() {
+
    let urlGeneros = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre" // Esta ruta se conoce como endpoint. De aqui sacaremos toda la informacion que necesitemos.
    
     fetch(urlGeneros) // Usamos fetch ya que nos permite consultar un recurso de forma asincronica, es decir, iniciar una accion sin depender de la finalizacion de acciones anteriores.
@@ -10,14 +10,14 @@ window.onload = function() {
 
         for(let i = 1; i < informacion.data.length; i++){
 
-            let genre = "<h2>" + informacion.data[i].name + "</h2>";
-            genre += "<img src=" + informacion.data[i].picture_big + ">"
+            let genre ="<a href='./detail-genres.html'>"+ "<h2>" + informacion.data[i].name + "</h2>"+"</a>";
+            genre += "<a href='./detail-genres.html'>"+"<img src=" + informacion.data[i].picture_big + ">"+"</a>"
 
-            document.querySelector(".content").innerHTML += "<article>" + genre + "</article>"
+            document.querySelector(".content").innerHTML += "<article class='data'>" + genre + "</article>"
         }
     })
     .catch(function(error) {
         console.log("Error:", error);
     })
-}
+
 
