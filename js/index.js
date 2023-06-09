@@ -1,29 +1,71 @@
 // Agregar endpoint de deezer para el buscador 
-window.onload = function() {
+
     let queryString = new URLSearchParams(location.search); //Esto significa todo el querystring, es decir: buscar="cualquier cosa que hayamos buscado"
     queryString.get("buscar")
 
     console.log(queryString);
-}
 
 
+// Hover para los "a", cuando paso por arriba cambia de color.
   
-let Letrita = document.querySelector("a")
+// Hover de HOME
+
+let home = document.querySelector(".navIndex")
 
 
-Letrita.addEventListener('mouseover', function() {
-
-    Letrita.style.color = '#979594'
+home.addEventListener('mouseover', function() {
+    
+    home.style.color = '#979594'
   });
 
+home.addEventListener('mouseout', function() {
 
-
-Letrita.addEventListener('mouseout', function(e) {
-
-    Letrita.style.color = 'black'
+    home.style.color = 'black'
 });
 
-console.log()
+// Hover de Canciones
+
+let canciones = document.querySelector(".navSongs")
+
+canciones.addEventListener('mouseover', function() {
+
+    canciones.style.color = '#979594'
+  });
+
+canciones.addEventListener('mouseout', function() {
+
+    canciones.style.color = 'black'
+});
+
+// Hover de Generos
+
+let generos = document.querySelector(".navGenres")
+
+generos.addEventListener('mouseover', function() {
+
+    generos.style.color = '#979594'
+  });
+
+generos.addEventListener('mouseout', function() {
+
+    generos.style.color = 'black'
+});
+
+// Hover de Artistas
+
+let artistas = document.querySelector(".navArtists")
+
+artistas.addEventListener('mouseover', function() {
+
+    artistas.style.color = '#979594'
+  });
+
+artistas.addEventListener('mouseout', function() {
+
+    artistas.style.color = 'black'
+});
+
+// Hasta aca van los Hover del "a".
 
 
 
