@@ -56,3 +56,7 @@ artistas.addEventListener('mouseout', function() {
 });
 
 // Hasta aca van los Hover del "a".
+
+// Albumes con las APIS
+
+let urlAlbumes = ""
