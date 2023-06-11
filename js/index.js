@@ -75,28 +75,52 @@ fetch(urlSongs)
 .then(function(data) {
   console.log(data.data); // Solo quiero el Cover y el Title.
   
-  let informacion = "";
+  let cancion = "";
 
   for (let i = 0; i < data.data.length; i++) {
-    let title = data.data[i].title;
-    let image = data.data[i].cover_medium;
+    let titleS = data.data[i].title;
+    let imageS = data.data[i].album.cover_medium;
 
-    info += `<li>
-      <h6 class="h6Album">${title}</h6> 
-      <img src="${image}" class="imgAlbum">
+    cancion += `<li>
+      <h6 class="h6Album">${titleS}</h6> 
+      <img src="${imageS}">
     </li>`;
   }
 
-  document.querySelector(".jsSongs").innerHTML = informacion;
+  document.querySelector(".jsSongs").innerHTML = cancion;
 
 })
 .catch(function(error) {
   console.log("Error: " + error);
-});
+})
 // Aca termina la API de Canciones
 
-
 // Aca arranca la API de Artistas
+
+fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists") // Usamos fetch ya que nos permite consultar un recurso de forma asincronica, es decir, iniciar una accion sin depender de la finalizacion de acciones anteriores.
+    .then(function(respuesta){ // En este caso el parametro "(response)" es el que recibe la informacion del endpoint, obtenida por el fetch.
+        return respuesta.json(); // Utiilizamos el metodo "json()" con el fin de decodificar la informacion obtenida por el fetch y poder utilizarla en forma de arrays, objetos, etc... Al ser su proceso asincronico, necesitamos de otra promesa, es decir, un segundo "then"
+    })
+    .then(function(informacion) { // El parametro "informacion", recibe la informacion decodificada gracias al primer then. Dentro de esta funcion escribiremos el codigo para poder trabajar con la informacion obtenida del API.
+        console.log(informacion.data)
+
+        let albums = ""
+
+        for(let i = 0; i < informacion.data.length; i++){
+            let titleA = informacion.data[i].name;
+            let imageA = informacion.data[i].picture_medium
+
+            albums += `<li>
+            <h6>${titleA}</h6>
+            <img src="${imageA}"> 
+            </li>`
+
+            document.querySelector(".jsArtistas").innerHTML = albums
+        }
+    })
+    .catch(function(error) {
+        console.log("Error:", error);
+    })
 
 // Aca termina la API de Artistas
 
