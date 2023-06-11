@@ -82,7 +82,7 @@ fetch(urlSongs)
     let imageS = data.data[i].album.cover_medium;
 
     cancion += `<li>
-      <h6 class="h6Album">${titleS}</h6> 
+      <h4>${titleS}</h4> 
       <img src="${imageS}">
     </li>`;
   }
@@ -111,7 +111,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
             let imageA = informacion.data[i].picture_medium
 
             albums += `<li>
-            <h6>${titleA}</h6>
+            <h4>${titleA}</h4>
             <img src="${imageA}"> 
             </li>`
 
@@ -147,7 +147,7 @@ fetch(urlAlbum)
       <a href="">
       <ul class="ul-album">
       <li>
-        <h3 class="h6Album">${title}</h3> 
+        <h4>${title}</h4> 
         </li>
         <li>
         <img src="${image}" class="imgAlbum">

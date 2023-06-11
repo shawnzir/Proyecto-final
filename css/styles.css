@@ -71,6 +71,19 @@ header nav {
 }
 /*HEADER*/
 
+/* Fondo inicial */
+
+.fondo {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.fondoInicial {
+  width: 50%;
+}
+/* Fondo inicial */
+
 /*CONTENIDO*/
 .content {
   margin-top: 60px;
@@ -85,16 +98,6 @@ header nav {
   margin-top: 100px;
 }
 
-
-.contsongs{
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-
 .titleArtists {
   text-align: center;
   margin-top: 100px;
@@ -106,7 +109,7 @@ header nav {
 }
 
 .cancionesTitle {
-  margin: 80px 0px 0px 10px;
+  margin: 90px 0px 0px 10px;
 }
 
 .artistasTitle {
@@ -152,9 +155,6 @@ header nav {
   text-align: center;
 }
 /* Titulos */
-.h6Album {
-  width: 250px;
-}
 
 
 /* Puse un display flex para mejorar un poco la estetica de la section. Wrap para que se vea todo en el mismo plano. y Space-evenly para que no este todo pegado. */
@@ -207,7 +207,8 @@ footer {
   width: 100%;
   -webkit-box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
   -moz-box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
-   box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
+  box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
+  margin-bottom: 40px;
 }
 footer ul {
   margin: 0 15%;
