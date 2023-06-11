@@ -85,13 +85,6 @@ header nav {
   margin-top: 100px;
 }
 
-.contenedor {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
 
 .contsongs{
   margin-top: 60px;
@@ -124,7 +117,8 @@ header nav {
 
 .jsSongs {
   display: flex;
-  flex: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
@@ -134,10 +128,18 @@ header nav {
   justify-content: space-evenly;
 }
 
+.jsArtistas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .imgAlbum {
   margin-right: 20px;
 }
 
+/* Titulos */
 .cancionesTitle {
   text-align: center;
 }
@@ -149,7 +151,7 @@ header nav {
 .albumesTitle {
   text-align: center;
 }
-
+/* Titulos */
 .h6Album {
   width: 250px;
 }
