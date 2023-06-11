@@ -1,4 +1,4 @@
-// Hover de HOME
+// Hover del Index
 
 let home = document.querySelector(".navIndex")
 
@@ -55,7 +55,7 @@ e.preventDefault()
 
 if(inputdebusqueda.value.length < 2){
 
-    alert("El campo tiene menos de 3 carateres, porfavor ingrese de vuelta su busqueda")
+    alert("El campo tiene menos de 3 carateres, por favor ingrese de vuelta su busqueda")
     
 
 
@@ -64,17 +64,44 @@ if(inputdebusqueda.value.length < 2){
 }
 })
 
+// Aca arranca la API de Canciones
 
-let urlalbum = "https://api.deezer.com/album/302127" 
+// Aca termina la API de Canciones
 
-fetch(urlalbum)
-.then(function (response) {
-    return response.json()
-})
 
-.then(function (data){
+// Aca arranca la API de Artistas
 
-    
+// Aca termina la API de Artistas
 
-    
-})
+// Aca arranca la API de Albumes.
+
+let urlAlbum = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums"; 
+
+fetch(urlAlbum)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    console.log(data.data); // Solo quiero el Cover y el Title.
+
+    let info = "";
+
+    for (let i = 0; i < data.data.length; i++) {
+      let title = data.data[i].title;
+      let image = data.data[i].cover_big;
+
+      info += `<li>
+        <h2>${title}</h2> 
+        <img src="${image}">
+      </li>`;
+    }
+
+    document.querySelector(".jsAlbum").innerHTML = info;
+
+  })
+  .catch(function(error) {
+    console.log("Error: " + error);
+  });
+
+// Aca termina la API de albumes.
+
