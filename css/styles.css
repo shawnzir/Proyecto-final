@@ -120,6 +120,40 @@ header nav {
   margin: 20px 0px 0px 10px;
 }
 
+/* Index:  */
+
+.jsSongs {
+  display: flex;
+  flex: wrap;
+  justify-content: space-evenly;
+}
+
+.jsAlbum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.imgAlbum {
+  margin-right: 20px;
+}
+
+.cancionesTitle {
+  text-align: center;
+}
+
+.artistasTitle {
+  text-align: center;
+}
+
+.albumesTitle {
+  text-align: center;
+}
+
+.h6Album {
+  width: 250px;
+}
+
 
 /* Puse un display flex para mejorar un poco la estetica de la section. Wrap para que se vea todo en el mismo plano. y Space-evenly para que no este todo pegado. */
 

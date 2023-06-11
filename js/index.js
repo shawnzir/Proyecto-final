@@ -66,6 +66,33 @@ if(inputdebusqueda.value.length < 2){
 
 // Aca arranca la API de Canciones
 
+let urlSongs = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks";
+
+fetch(urlSongs)
+.then(function(response) {
+  return response.json();
+})
+.then(function(data) {
+  console.log(data.data); // Solo quiero el Cover y el Title.
+  
+  let informacion = "";
+
+  for (let i = 0; i < data.data.length; i++) {
+    let title = data.data[i].title;
+    let image = data.data[i].cover_medium;
+
+    info += `<li>
+      <h6 class="h6Album">${title}</h6> 
+      <img src="${image}" class="imgAlbum">
+    </li>`;
+  }
+
+  document.querySelector(".jsSongs").innerHTML = informacion;
+
+})
+.catch(function(error) {
+  console.log("Error: " + error);
+});
 // Aca termina la API de Canciones
 
 
@@ -88,11 +115,11 @@ fetch(urlAlbum)
 
     for (let i = 0; i < data.data.length; i++) {
       let title = data.data[i].title;
-      let image = data.data[i].cover_big;
+      let image = data.data[i].cover_medium;
 
       info += `<li>
-        <h2>${title}</h2> 
-        <img src="${image}">
+        <h6 class="h6Album">${title}</h6> 
+        <img src="${image}" class="imgAlbum">
       </li>`;
     }
 
