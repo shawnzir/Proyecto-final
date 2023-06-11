@@ -7,7 +7,7 @@ body {
   padding: 0;
   width: 100%;
   font-size: 1rem;
-  background-color: #626364;
+  background-color: #dddddd;
 }
 
 li {
@@ -157,10 +157,6 @@ header nav {
 
 /* Puse un display flex para mejorar un poco la estetica de la section. Wrap para que se vea todo en el mismo plano. y Space-evenly para que no este todo pegado. */
 
-article {
-  width: 20%;
-  margin: 0px 10px;
-}
 
 
 
@@ -168,23 +164,25 @@ article {
 
 /*generos*/
 
-.titulo-de-gen{
 
-  font-size: 100px;
-  background-color: #CDCAC8;
-  margin: 0px 400px;
-  border-radius: 50px;
 
+.albums{
+  
+  
+ 
+  display: flex;
+ 
+  flex-direction: row;
+  
+ 
 }
 
+.ul-album{
 
-.data{
-  
-  background-color: #CDCAC8 ;
-  padding: 20px;
+  background-color: #b8b5b5;
   margin: 10px;
-  border-radius: 10px;
-  color: black;
+  padding: 10px 30px 20px;
+
 }
 
 
@@ -220,8 +218,8 @@ footer ul {
 
 footer ul li {
   /* ESTILOS. */
-  background-color:  #808284;
-  width: 170px;
+  background-color:  #b8b5b5;
+  width: 370px;
   margin:15px 0px;
   border: 1px;
   padding:10px 20px;  
@@ -231,7 +229,7 @@ footer ul li {
 }
 footer a {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 footer ul li {
   list-style-type: none;
@@ -257,7 +255,8 @@ footer ul li {
 
   footer ul {
     margin: 0 2%;
-    
+    display: flex;
+    justify-content: center;
   
 }
 

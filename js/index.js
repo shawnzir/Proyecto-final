@@ -112,15 +112,27 @@ fetch(urlAlbum)
     console.log(data.data); // Solo quiero el Cover y el Title.
 
     let info = "";
+    
 
     for (let i = 0; i < data.data.length; i++) {
       let title = data.data[i].title;
       let image = data.data[i].cover_medium;
 
-      info += `<li>
-        <h6 class="h6Album">${title}</h6> 
+      info += `
+      <article class="albums">
+      <a href="">
+      <ul class="ul-album">
+      <li>
+        <h3 class="h6Album">${title}</h3> 
+        </li>
+        <li>
         <img src="${image}" class="imgAlbum">
-      </li>`;
+        </li>
+      </ul>
+      </a>
+      </article>
+      
+      `;
     }
 
     document.querySelector(".jsAlbum").innerHTML = info;
