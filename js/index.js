@@ -81,10 +81,19 @@ fetch(urlSongs)
     let titleS = data.data[i].title;
     let imageS = data.data[i].album.cover_medium;
 
-    cancion += `<li>
+    cancion += `
+    
+    <article class="canciones">
+    <a href="">
+    <ul class="ul-canciones">
+    <li>
       <h4>${titleS}</h4> 
       <img src="${imageS}">
-    </li>`;
+    </li>
+    </ul>
+    </a>
+    </article>
+    `;
   }
 
   document.querySelector(".jsSongs").innerHTML = cancion;
@@ -110,10 +119,20 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
             let titleA = informacion.data[i].name;
             let imageA = informacion.data[i].picture_medium
 
-            albums += `<li>
+            albums += `
+            
+            <article class="artistas">
+            <a href="">
+            <ul class="ul-artistas">
+            <li>
             <h4>${titleA}</h4>
             <img src="${imageA}"> 
-            </li>`
+            </li>
+            </ul>
+            </a>
+            </article>
+            `
+            
 
             document.querySelector(".jsArtistas").innerHTML = albums
         }
