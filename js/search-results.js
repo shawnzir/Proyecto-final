@@ -45,20 +45,48 @@ generos6.addEventListener('mouseout', function() {
 
 // El lugar donde buscar 
 
-let qs = location.search //Query String en formato texto
-let qstObjects = new URLSearchParams(qs)
+let qs = location.search //quarristrin en formato textp
 
-let datoabuscar =   qstObjects.get('buscar') //Necesito lo que el usuario escribo en el imput
+let qsToobjects = new URLSearchParams(qs)
 
-let endPointBusqueda = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${datoabuscar}"
+let datoabuscar =   qsToobjects.get("buscar") //necesito lo que el usuario escribo en el imput
+
+
+let endPointBusqueda = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${datoabuscar}`
+
+
 
 fetch(endPointBusqueda)
 .then(function (response) {
-    return response.json()
+    return response.json();
 })
-.then(function (datos) {
-    console.log(datos.data)
+.then(function (data) {
+    console.log(data.data)
 
+
+    let busq = "";
+
+    for (let i = 0; i <  data.data.length; i++) {
+      let titleS = data.data[i].title;
+      let imageS = data.data[i].album.cover_medium;
+      let nartistas = data.data[i].artist.name;
+  
+      busq += `
+      
+      <article class="" >
+      <a href="">
+      <ul class="">
+      <li >
+        <h4>${titleS}</h4> 
+        <img src="${imageS}">
+        <h5>${nartistas}</h5> 
+      </li>
+      </ul>
+      </a>
+      </article>
+      `;
+    }
+  
     // mostrar resultados de busqueda en la pantalla
 
     // mostar un aviso en caso de que la busqueda no tenga resultados 
