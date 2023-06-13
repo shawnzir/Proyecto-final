@@ -14,54 +14,64 @@
             <ul>
                 <li class="logo"></li>
             </ul>
-
-          <ul class="ul-menu-arriba">
-            
-            
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-              <li>
-              <a href="songs.html">Songs</a>
-              </li>
-              <li>
-                  <a href="genres.html">Genres</a>
-              </li>
-              <li>
-                  <a href="artists.html">Artists</a>
-              </li>
-              <li>
-                <form class="buscador" action="" method="get">
-                    <input type="text" name="buscar" value="" placeholder="                                    🔍︎">
-                </form>
-              </li>
-          </ul>
+            <ul class="ul-menu-arriba">
+                <li>
+                    <a href="index.html" class="navIndex">Home</a>
+                </li>
+                <li>
+                    <a href="playlist.html" class="navPlaylist">Playlist</a>
+                </li>
+                <li>
+                    <a href="genres.html" class="navGenres">Genres</a>
+                </li>
+                <li>
+                    <form class="buscador" action="" method="get">
+                        <input type="text" name="buscar" value="" placeholder="">
+                    </form>
+                </li>
+            </ul>
         </nav>
-    </header>\
+    </header>
+    <h2 class="cancionesTitle">
+        <a href="songs.html">
+            Canciones
+        </a>
+    </h2>
+    <section class="secanciones">
+        <article class="bloque-canciones">
+            <h3>
+                <a class="nombre-cancion" href="">
 
-  <main>
+                </a>Nombre cancion</h3>
+<!-- Aca iria la Imagen -->
+<article class="bl-nombrec">
+    <a href="">Nombre album</a>
+    <a href="">Nombre artista</a>
+</article>
+</article>
+</section>
 
-    <section class="Li-Cansiones">
-        <H2>Canciones</H2>
-        <article >
+<h2 class="artistasTitle">
+    <a href="artists.html">Artistas</a>
+</h2>
+<section class="secartistas">
+    <article class="bloque-artista">
+        <h3> 
+            <a class="nombreartistas" href="">
 
-
-
-
+            </a>Nombre artista</h3>
+            <img src="" alt="">
+            <article class="bl-nombreart">
+                <a href="">Nombre album</a>
+                <a href="">Nombre artista</a>
+            </article>
         </article>
-
-
-
     </section>
-
-
-
-
-
-
-  </main>
-        
-   
+    <h2 class="albumesTitle">
+        <a href="albumes.html">
+        Albumes
+    </a>
+    </h2>
     <footer>
         <ul class="ul-menu" type="none">
             <li class="li-menu"><a href="#home">Home</a></li>
@@ -73,7 +83,6 @@
             <h3>Creado por Bautista Lignini - Piki Poggio - Shawn Zir &#169; 2023</h3>
         </div>
     </footer>
-
     <script src="./js/index.js"></script>
     <script src="./js/search-results.js"></script>
 </body>

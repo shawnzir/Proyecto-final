@@ -1,29 +1,47 @@
-// Agregar endpoint de deezer para el buscador 
-window.onload = function() {
-    let queryString = new URLSearchParams(location.search); //Esto significa todo el querystring, es decir: buscar="cualquier cosa que hayamos buscado"
-    queryString.get("buscar")
+// Hover de HOME
 
-    console.log(queryString);
-}
+let home = document.querySelector(".navIndex")
 
 
-  
-let Letrita = document.querySelector("a")
-
-
-Letrita.addEventListener('mouseover', function() {
-
-    Letrita.style.color = '#979594'
+home.addEventListener('mouseover', function() {
+    
+    home.style.color = '#979594'
   });
 
+home.addEventListener('mouseout', function() {
 
-
-Letrita.addEventListener('mouseout', function(e) {
-
-    Letrita.style.color = 'black'
+    home.style.color = 'black'
 });
 
-console.log()
+// Hover de Canciones
+
+let playlist = document.querySelector(".navPlaylist")
+
+playlist.addEventListener('mouseover', function() {
+
+    playlist.style.color = '#979594'
+  });
+
+playlist.addEventListener('mouseout', function() {
+
+    playlist.style.color = 'black'
+});
+
+// Hover de Generos
+
+let generos = document.querySelector(".navGenres")
+
+generos.addEventListener('mouseover', function() {
+
+    generos.style.color = '#979594'
+  });
+
+generos.addEventListener('mouseout', function() {
+
+    generos.style.color = 'black'
+});
+
+// Hasta aca van los Hover del "a".
 
 
 
@@ -47,30 +65,16 @@ if(inputdebusqueda.value.length < 2){
 })
 
 
-let urlm = "" //poner url
+let urlalbum = "https://api.deezer.com/album/302127" 
 
-fetch(urlm)
+fetch(urlalbum)
 .then(function (response) {
     return response.json()
 })
 
 .then(function (data){
 
-    let packcanciones= data.track.data;
-    console.log(packcanciones)
+    
 
- //   let listadecanciones= document.querySelector(".secanciones")
- //   let canciones = ""
- //   for(let i=0; i< 5; i++){
-//
-//        canciones += `<article class="bloque-canciones">
-//        <h3> <a class="nombrecancion" href=""></a>Nombre cancion</h3>
-//    <img src="" alt="">
-//    <article class="bl-nombrec">
-//    <a href="">Nombre album</a>
-//    <a href="">Nombre artista</a>
-//    </article>
-//    </article>`
-//    }
     
 })

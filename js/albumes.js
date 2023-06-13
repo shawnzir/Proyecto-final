@@ -43,16 +43,21 @@ generos.addEventListener('mouseout', function() {
 
 // Hasta aca van los Hover del "a".
 
-let urlPlaylist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/27"
+// Albumes con las APIS
 
-fetch(urlPlaylist)
-.then(function(response){
-  return response.json();
+let urlAlbumes = "https://api.deezer.com/album/302127"
+
+{
+  fetch(urlAlbumes) 
+  .then(function(response) {
+  
+  return response.json()
 })
-.then(function(data){
+  .then(function(data) {
   console.log(data);
 })
 
-.catch(function(error){
-  console.log("el error es:" + error)
+.catch(function(error) {
+  console.log("Error: " + error);
 });
+}
