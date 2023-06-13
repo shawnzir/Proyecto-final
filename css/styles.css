@@ -255,7 +255,46 @@ border-radius: 1%;
 
 }
 
+/*BUSCADOR*/
+.tit-resultadodebusqueda{
+  
+  display: flex;
+  
+  font-size: 300%;
+}
 
+.Buscador{
+  
+  
+ 
+  display: flex;
+ 
+  flex-direction: row;
+  
+ 
+}
+
+.ul-Buscador{
+
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 10px 30px 20px;
+
+}
+
+.jssearch{
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  
+
+}
+
+
+/*BUSCADOR*/
 
 /*CONTENIDO*/
 

@@ -47,7 +47,7 @@ generos6.addEventListener('mouseout', function() {
 
 let qs = location.search //quarristrin en formato textp
 
-let qsToobjects = new URLSearchParams(qs)
+let qsToobjects = new URLSearchParams(qs);
 
 let datoabuscar =   qsToobjects.get("buscar") //necesito lo que el usuario escribo en el imput
 
@@ -73,13 +73,14 @@ fetch(endPointBusqueda)
   
       busq += `
       
-      <article class="" >
+      <article class="Buscador" >
       <a href="">
-      <ul class="">
+      <ul class="ul-Buscador">
       <li >
         <h4>${titleS}</h4> 
+        <h6>${nartistas}</h6> 
         <img src="${imageS}">
-        <h5>${nartistas}</h5> 
+        
       </li>
       </ul>
       </a>
@@ -87,6 +88,9 @@ fetch(endPointBusqueda)
       `;
     }
   
+
+    document.querySelector(".jssearch").innerHTML = busq;
+
     // mostrar resultados de busqueda en la pantalla
 
     // mostar un aviso en caso de que la busqueda no tenga resultadso 
