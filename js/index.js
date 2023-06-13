@@ -77,18 +77,20 @@ fetch(urlSongs)
   
   let cancion = "";
 
-  for (let i = 0; i < data.data.length; i++) {
+  for (let i = 0; i <  data.data.length; i++) {
     let titleS = data.data[i].title;
     let imageS = data.data[i].album.cover_medium;
+    let nartistas = data.data[i].artist.name;
 
     cancion += `
     
-    <article class="canciones">
+    <article class="canciones" >
     <a href="">
     <ul class="ul-canciones">
-    <li>
+    <li >
       <h4>${titleS}</h4> 
       <img src="${imageS}">
+      <h5>${nartistas}</h5> 
     </li>
     </ul>
     </a>
@@ -114,6 +116,9 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
         console.log(informacion.data)
 
         let albums = ""
+
+              // for(let i = 0; i < 5; i++) lo de abajo lo podemos hacer asi y solo muestra 5, de esta manera va a ser mas corto y prolio
+
 
         for(let i = 0; i < informacion.data.length; i++){
             let titleA = informacion.data[i].name;
