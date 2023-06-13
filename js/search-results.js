@@ -93,7 +93,7 @@ fetch(endPointBusqueda)
 
     // mostrar resultados de busqueda en la pantalla
 
-    // mostar un aviso en caso de que la busqueda no tenga resultadso 
+    // mostar un aviso en caso de que la busqueda no tenga resultados 
 })
 .catch(function (e) {
     console.log(e)
