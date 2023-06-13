@@ -7,7 +7,7 @@ body {
   padding: 0;
   width: 100%;
   font-size: 1rem;
-  background-color:  #626364;
+  background-color: #dddddd;
 }
 
 li {
@@ -27,7 +27,7 @@ header {
 }
 
 header nav {
-    background-color: #494A4A;
+    background-color:  whitesmoke;
     position: fixed;
     width: 100%;
     height: 60px;
@@ -52,7 +52,7 @@ header nav {
     height: 60px;
   }
   nav ul li a {
-    color: white;
+    color: black;
     font-weight: bold;
     text-decoration: none;
   }
@@ -71,6 +71,19 @@ header nav {
 }
 /*HEADER*/
 
+/* Fondo inicial */
+
+.fondo {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.fondoInicial {
+  width: 50%;
+}
+/* Fondo inicial */
+
 /*CONTENIDO*/
 .content {
   margin-top: 60px;
@@ -81,26 +94,11 @@ header nav {
 }
 
 .titleGenres {
-  text-align: center;
+  
+  margin-left: 3%;
   margin-top: 100px;
+  font-size: 200%;
 }
-
-.contenedor {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.contsongs{
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
 
 .titleArtists {
   text-align: center;
@@ -113,51 +111,149 @@ header nav {
 }
 
 .cancionesTitle {
-  margin: 80px 0px 0px 10px;
+  margin: 90px 0px 0px 10px;
 }
 
 .artistasTitle {
   margin: 20px 0px 0px 10px;
 }
 
+/* Index:  */
+
+.jsSongs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.jsAlbum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.jsArtistas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.imgAlbum {
+  margin-right: 20px;
+}
+
+/* Titulos */
+.cancionesTitle {
+  margin: 40px 90px;
+  font-size: 400%;
+  
+}
+
+.artistasTitle {
+  margin: 40px 90px;
+  font-size: 400%;
+  
+}
+
+.albumesTitle {
+  margin: 40px 90px;
+  font-size: 400%;
+  
+}
+/* Titulos */
+
 
 /* Puse un display flex para mejorar un poco la estetica de la section. Wrap para que se vea todo en el mismo plano. y Space-evenly para que no este todo pegado. */
 
-article {
-  width: 20%;
-  margin: 0px 10px;
-}
 
 
 
 
 
-img {
-  width: 100%;
-}
-
-/*generos*/
-
-.titulo-de-gen{
-
-  font-size: 100px;
-  background-color: #CDCAC8;
-  margin: 0px 400px;
-  border-radius: 50px;
-
-}
 
 
-.data{
+/* home canciones*/
+.canciones{
   
-  background-color: #CDCAC8 ;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-  color: black;
+  
+ 
+  display: flex;
+ 
+  flex-direction: row;
+  
+ 
 }
 
+.ul-canciones{
 
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 10px 30px 20px;
+
+}
+
+/* home canciones*/
+
+
+/* home artistas*/
+.artistas{
+  
+  
+ 
+  display: flex;
+ 
+  flex-direction: row;
+  
+ 
+}
+
+.ul-artistas{
+
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 10px 30px 20px;
+
+}
+
+/* home artistas*/
+
+
+
+/* home albums*/
+
+.albums{
+  
+  
+ 
+  display: flex;
+ 
+  flex-direction: row;
+  
+ 
+}
+
+.ul-album{
+
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 10px 30px 20px;
+
+}
+
+/* home albums*/
+
+.Generos-data{
+
+background-color: #b8b5b5;
+padding: 30px 40px;
+margin: 20px 20px;
+border-radius: 1%;
+
+
+
+}
 
 
 
@@ -177,7 +273,8 @@ footer {
   width: 100%;
   -webkit-box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
   -moz-box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
-   box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
+  box-shadow: 0px -10px 9px -10px rgba(0,0,0,.8);
+  margin-bottom: 40px;
 }
 footer ul {
   margin: 0 15%;
@@ -190,8 +287,8 @@ footer ul {
 
 footer ul li {
   /* ESTILOS. */
-  background-color:  #808284;
-  width: 170px;
+  background-color:  #b8b5b5;
+  width: 370px;
   margin:15px 0px;
   border: 1px;
   padding:10px 20px;  
@@ -201,7 +298,7 @@ footer ul li {
 }
 footer a {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 footer ul li {
   list-style-type: none;
@@ -227,7 +324,8 @@ footer ul li {
 
   footer ul {
     margin: 0 2%;
-    
+    display: flex;
+    justify-content: center;
   
 }
 
@@ -263,17 +361,61 @@ header nav {
   background-color: #f3f5f8;
   position: absolute;
   width: 100%;
-  height: 130px;
+  height: 360px;
+  margin-bottom: 200px;
+  
+}
+.ul-menu-arriba {
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  
+ 
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+nav ul li {
+  margin: 3px;
+  padding: 15px 12px 0 12px;
+  
+  font-size: 1.5rem;
+  height: 60px;
+  width: 430px;
+  font-size: 30px;
+  
+  
+
 }
 
 
 
+
+.titulo-de-gen {
+  font-size: 50px;
+  margin: 60px;
+  margin-top: 450px;
+}
+
   
   
 
 
-
-  
+.fondo {
+  display: flex;
+  justify-content: center;
+  margin-top: 400px
+}
 
   
 
@@ -287,7 +429,7 @@ header nav {
 
 
 footer ul li {
-  background-color: gainsboro;
+  background-color: b8b5b5;
   width: 440px;
   margin: 15px 0px;
   border: 1px;

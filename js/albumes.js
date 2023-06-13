@@ -1,44 +1,44 @@
 // Hover de HOME
 
-let home = document.querySelector(".navIndex")
+let home5 = document.querySelector(".navIndex")
 
 
-home.addEventListener('mouseover', function() {
+home5.addEventListener('mouseover', function() {
     
-    home.style.color = '#979594'
+    home5.style.color = '#979594'
   });
 
-home.addEventListener('mouseout', function() {
+home5.addEventListener('mouseout', function() {
 
-    home.style.color = 'black'
+    home5.style.color = 'black'
 });
 
 // Hover de Canciones
 
-let playlist = document.querySelector(".navPlaylist")
+let playlist5 = document.querySelector(".navPlaylist")
 
-playlist.addEventListener('mouseover', function() {
+playlist5.addEventListener('mouseover', function() {
 
-    playlist.style.color = '#979594'
+    playlist5.style.color = '#979594'
   });
 
-playlist.addEventListener('mouseout', function() {
+playlist5.addEventListener('mouseout', function() {
 
-    playlist.style.color = 'black'
+    playlist5.style.color = 'black'
 });
 
 // Hover de Generos
 
-let generos = document.querySelector(".navGenres")
+let generos5 = document.querySelector(".navGenres")
 
-generos.addEventListener('mouseover', function() {
+generos5.addEventListener('mouseover', function() {
 
-    generos.style.color = '#979594'
+    generos5.style.color = '#979594'
   });
 
-generos.addEventListener('mouseout', function() {
+generos5.addEventListener('mouseout', function() {
 
-    generos.style.color = 'black'
+    generos5.style.color = 'black'
 });
 
 // Hasta aca van los Hover del "a".
