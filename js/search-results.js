@@ -48,7 +48,7 @@ generos6.addEventListener('mouseout', function() {
 let qs = location.search //quarristrin en formato textp
 let qstoobjects = new URLSearchParams(qs)
 
-let datoabuscar =   qstoobjects.get("buscar") //necesito lo que el usuario escribo en el imput
+let datoabuscar =   qstoobjects.get("") //necesito lo que el usuario escribo en el imput
 
 let endpointbusqueda = "https://api.deezer.com/search?q=${datoabuscar}"
 
