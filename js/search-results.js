@@ -46,13 +46,13 @@ generos6.addEventListener('mouseout', function() {
 // El lugar donde buscar 
 
 let qs = location.search //quarristrin en formato textp
-let qstoobjects = new URLSearchParams(qs)
+let qstObjects = new URLSearchParams(qs)
 
-let datoabuscar =   qstoobjects.get("buscar") //necesito lo que el usuario escribo en el imput
+let datoabuscar =   qstObjects.get("buscar") //necesito lo que el usuario escribo en el imput
 
-let endpointbusqueda = "https://api.deezer.com/search?q=${datoabuscar}"
+let endPointBusqueda = "https://cors-anywhere.herokuapp.com/corsdemohttps://api.deezer.com/search?q=${datoabuscar}"
 
-fetch(endpointbusqueda)
+fetch(endPointBusqueda)
 .then(function (response) {
     return response.json()
 })
