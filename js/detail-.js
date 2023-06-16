@@ -46,55 +46,37 @@ generos7.addEventListener('mouseout', function() {
 
 // detalles
 
-let qs = location.search //quarristrin en formato textp
 
-let qsToobjects = new URLSearchParams(qs);
+let qs =location.search;
+let qsObj = new URLSearchParams(qs);
+let id = qsObj.get('id')
 
-let datoabuscar =   qsToobjects.get("buscar") //necesito lo que el usuario escribo en el imput
-
-
-let endPointBusqueda = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${datoabuscar}`
+let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
 
 
 
-fetch(endPointBusqueda)
+fetch(endPointartistdetalle)
+
 .then(function (response) {
     return response.json();
 })
 .then(function (data) {
-    console.log(data.data)
+    console.log(data)
 
+//falta terminar 
 
-    let busq = "";
+    let busq =  
 
-    for (let i = 0; i <  data.data.length; i++) {
-      let titleS = data.data[i].title;
-      let imageS = data.data[i].album.cover_medium;
-      let nartistas = data.data[i].artist.name;
-  
-      busq += `
+    // esta todo linkiado, solo falta mostrarlo por pantalla
       
-      <article class="Buscador" >
-      <a href="./detail.html">
-      <ul class="ul-Buscador">
-      <li >
-        <h4>${titleS}</h4> 
-        <h6>${nartistas}</h6> 
-        <img src="${imageS}">
-        <a href="./playlist.html"> ESTO NO SE Agregar A Playlist </a>
-      </li>
-      </ul>
-      </a>
-      </article>
-      `;
-    }
+     
+      
+    
   
 
-    document.querySelector(".jssearch").innerHTML = busq;
+    document.querySelector(".jsdetailcan").innerHTML = busq;
 
-    // mostrar resultados de busqueda en la pantalla
-
-    // mostar un aviso en caso de que la busqueda no tenga resultados 
+     
 })
 .catch(function (e) {
     console.log(e)
