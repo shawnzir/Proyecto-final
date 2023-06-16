@@ -1,49 +1,50 @@
-// Hover del Index
+// Hover de HOME
 
-let home6 = document.querySelector(".navIndex")
+let home7 = document.querySelector(".navIndex")
 
 
-home6.addEventListener('mouseover', function() {
+home7.addEventListener('mouseover', function() {
     
-    home6.style.color = '#979594'
+    home7.style.color = '#979594'
   });
 
-home6.addEventListener('mouseout', function() {
+home7.addEventListener('mouseout', function() {
 
-    home6.style.color = 'black'
+    home7.style.color = 'black'
 });
 
 // Hover de Canciones
 
-let playlist6 = document.querySelector(".navPlaylist")
+let playlist7 = document.querySelector(".navPlaylist")
 
-playlist6.addEventListener('mouseover', function() {
+playlist7.addEventListener('mouseover', function() {
 
-    playlist6.style.color = '#979594'
+    playlist7.style.color = '#979594'
   });
 
-playlist6.addEventListener('mouseout', function() {
+playlist7.addEventListener('mouseout', function() {
 
-    playlist6.style.color = 'black'
+    playlist7.style.color = 'black'
 });
 
 // Hover de Generos
 
-let generos6 = document.querySelector(".navGenres")
+let generos7 = document.querySelector(".navGenres")
 
-generos6.addEventListener('mouseover', function() {
+generos7.addEventListener('mouseover', function() {
 
-    generos6.style.color = '#979594'
+    generos7.style.color = '#979594'
   });
 
-generos6.addEventListener('mouseout', function() {
+generos7.addEventListener('mouseout', function() {
 
-    generos6.style.color = 'black'
+    generos7.style.color = 'black'
 });
 
 // Hasta aca van los Hover del "a".
 
-// El lugar donde buscar 
+
+// detalles
 
 let qs = location.search //quarristrin en formato textp
 
@@ -80,7 +81,7 @@ fetch(endPointBusqueda)
         <h4>${titleS}</h4> 
         <h6>${nartistas}</h6> 
         <img src="${imageS}">
-        
+        <a href="./playlist.html"> ESTO NO SE Agregar A Playlist </a>
       </li>
       </ul>
       </a>
@@ -102,3 +103,15 @@ fetch(endPointBusqueda)
 
 
 // si el array viene basyo podess con inner tex y if poner esto no tiene resultados
+
+
+
+
+
+
+
+
+
+
+
+// detalles
