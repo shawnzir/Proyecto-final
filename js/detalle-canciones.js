@@ -111,7 +111,7 @@ fetch(endPointartistdetalle)
     <li class="img-detalle">
       <img  src="${imageS}">
     </li>
-    <li >
+    <li>
       <h3>Nombre De La Cancion: ${titleS}</h3> 
       <h3>Nombre Del Artista: ${nArtistas}</h3> 
       <h3>Nombre Del Album: ${album}</h3> 
