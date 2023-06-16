@@ -77,7 +77,7 @@ if(inputdebusqueda.value.length === 0 ){
 
 
 
-// detalles
+// Detalles
 
 
 let qs =location.search;
@@ -96,13 +96,14 @@ fetch(endPointartistdetalle)
 .then(function (data) {
     console.log(data)
 
-    let contenedor = document.querySelector(".jsSongs")
+    let contenedor = document.querySelector(".jsCanciones")
+    console.log(contenedor);
 
 
-    let titleS = data.title;
+      let titleS = data.title;
       let imageS = data.album.cover_medium;
-      let nartistas = data.artist.name;
-      let detalle = data.id
+      let nArtistas = data.artist.name;
+      let album = data.album.title
 
 
     let cancion = `
@@ -110,9 +111,10 @@ fetch(endPointartistdetalle)
     
     <ul class="ul-canciones">
     <li >
-      <h4>${titleS}</h4> 
+      <h5>Nombre De La Cancion: ${titleS}</h5> 
+      <h5>Nombre Del Artista: ${nArtistas}</h5> 
+      <h5>Nombre Del Album: ${album}</h5> 
       <img src="${imageS}">
-      <h5>${nartistas}</h5> 
     </li>
     </ul>
     </article>
