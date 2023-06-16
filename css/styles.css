@@ -336,6 +336,13 @@ justify-content: center
 
 
 }
+.ul-canciones-detalle2{
+
+  
+  display: flex;
+
+
+}
 
 .img-detalle{
 
@@ -343,6 +350,60 @@ justify-content: center
 
 }
 
+/* detalle artista*/
+
+.ul-artistas-detalle2{
+
+display: flex;
+justify-content: center;
+
+
+}
+
+.ul-artistas-detalle{
+
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 30px 40px 20px;
+  display: flex;
+
+
+}
+
+/*artista*/
+
+
+/*genero detalle*/
+
+.se-generos{
+
+  display: flex;
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 30px 40px 20px;
+
+
+}
+
+.jsgenere{
+
+display: flex;
+
+}
+
+.Nombre-artsistasg{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+
+
+/*genero detalle*/
 
 
 
