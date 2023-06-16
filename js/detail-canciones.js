@@ -45,9 +45,9 @@ generos7.addEventListener('mouseout', function() {
 // Hasta aca van los Hover del "a".
 
 
-// detalles
+// Detalles
 
-let qs = location.search //quarristrin en formato textp
+let qs = location.search // Query String en formato texto
 
 let qsToobjects = new URLSearchParams(qs);
 
@@ -71,16 +71,16 @@ fetch(urlDetalle)
     for (let i = 0; i <  data.data.length; i++) {
       let titleS = data.data[i].title;
       let imageS = data.data[i].album.cover_medium;
-      let nartistas = data.data[i].artist.name;
+      let nArtistas = data.data[i].artist.name;
   
       busq += `
       
       <article class="ul-detalle-artistas" >
       <a href="./detail-canciones.html">
       <ul class="ul-detalle-artistas">
-      <li >
+      <li>
         <h4>${titleS}</h4> 
-        <h6>${nartistas}</h6> 
+        <h6>${nArtistas}</h6> 
         <img src="${imageS}">
         <a href="./playlist.html"> ESTO NO SE Agregar A Playlist </a>
       </li>
@@ -103,7 +103,7 @@ fetch(urlDetalle)
 
 
 
-// si el array viene basyo podess con inner tex y if poner esto no tiene resultados
+// si el array viene basyo podess con inner text y if poner esto no tiene resultados
 
 
 
@@ -116,3 +116,5 @@ fetch(urlDetalle)
 
 
 // detalles
+
+// Conseguir el storage => lo parceo => lo recorro 

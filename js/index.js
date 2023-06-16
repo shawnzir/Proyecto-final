@@ -45,7 +45,7 @@ generos.addEventListener('mouseout', function() {
 
 
 
-// Buscador que ande 
+// Buscador 
 
 let form = document.querySelector('form')
 let inputdebusqueda= document.querySelector('input')
@@ -86,7 +86,7 @@ fetch(urlSongs)
     cancion += `
     
     <article class="canciones" >
-    <a href="./detail.html?id=${detalle}">
+    <a href="./detail-canciones.html?id=${detalle}">
     <ul class="ul-canciones">
     <li >
       <h4>${titleS}</h4> 
