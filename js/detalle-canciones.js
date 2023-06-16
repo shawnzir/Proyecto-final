@@ -84,7 +84,7 @@ let qs =location.search;
 let qsObj = new URLSearchParams(qs);
 let id = qsObj.get('id')
 
-let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
+let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
 
 
 
@@ -101,21 +101,24 @@ fetch(endPointartistdetalle)
 
 
       let titleS = data.title;
-      let imageS = data.album.cover_medium;
+      let imageS = data.album.cover_big;
       let nArtistas = data.artist.name;
       let album = data.album.title
 
 
     let cancion = `
-    <article class="canciones" >
+    <article class="canciones-detalle" >
     
-    <ul class="ul-canciones">
-    <li >
-      <h5>Nombre De La Cancion: ${titleS}</h5> 
-      <h5>Nombre Del Artista: ${nArtistas}</h5> 
-      <h5>Nombre Del Album: ${album}</h5> 
-      <img src="${imageS}">
+    <ul class="ul-canciones-detalle">
+    <li class="img-detalle">
+      <img  src="${imageS}">
     </li>
+    <li >
+      <h3>Nombre De La Cancion: ${titleS}</h3> 
+      <h3>Nombre Del Artista: ${nArtistas}</h3> 
+      <h3>Nombre Del Album: ${album}</h3> 
+    </li>
+      
     </ul>
     </article>
     `;
