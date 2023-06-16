@@ -45,7 +45,7 @@ generos.addEventListener('mouseout', function() {
 
 
 
-// Buscador que ande 
+// Buscador 
 
 let form = document.querySelector('form')
 let inputdebusqueda= document.querySelector('input')
@@ -53,14 +53,24 @@ let inputdebusqueda= document.querySelector('input')
 form.addEventListener('submit', function(e){
 e.preventDefault()
 
-if(inputdebusqueda.value.length < 2){
+if(inputdebusqueda.value.length === 0 ){
+
+    alert("El campo esta vacio, por favor ingrese de vuelta su busqueda")
+
+    } 
+  
+  else {
+
+  if(inputdebusqueda.value.length < 3){
 
     alert("El campo tiene menos de 3 carateres, por favor ingrese de vuelta su busqueda")
-    
 
-
-} else {
-    this.submit()
+  }
+  else { 
+      
+      this.submit() 
+  
+  }
 }
 })
 
@@ -86,7 +96,7 @@ fetch(urlSongs)
     cancion += `
     
     <article class="canciones" >
-    <a href="./detail.html?id=${detalle}">
+    <a href="./detail-canciones.html?id=${detalle}">
     <ul class="ul-canciones">
     <li >
       <h4>${titleS}</h4> 
@@ -129,7 +139,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
             albums += `
             
             <article class="artistas">
-            <a href="./detail.html">
+            <a href="./detail-genres.html">
             <ul class="ul-artistas">
             <li>
             <h4>${titleA}</h4>
@@ -170,7 +180,7 @@ fetch(urlAlbum)
 
       info += `
       <article class="albums">
-      <a href="./detail.html">
+      <a href="./detail-genres.html">
       <ul class="ul-album">
       <li>
         <h4>${title}</h4> 

@@ -43,6 +43,41 @@ generos6.addEventListener('mouseout', function() {
 
 // Hasta aca van los Hover del "a".
 
+// buscador 
+
+let form = document.querySelector('form')
+let inputdebusqueda= document.querySelector('input')
+
+form.addEventListener('submit', function(e){
+e.preventDefault()
+
+if(inputdebusqueda.value.length === 0 ){
+
+    alert("El campo esta vacio, por favor ingrese de vuelta su busqueda")
+
+    } 
+  
+  else {
+
+  if(inputdebusqueda.value.length < 3){
+
+    alert("El campo tiene menos de 3 carateres, por favor ingrese de vuelta su busqueda")
+
+  }
+  else { 
+      
+      this.submit() 
+  
+  }
+}
+})
+
+
+// buscador 
+
+
+
+
 // El lugar donde buscar 
 
 let qs = location.search //quarristrin en formato textp
@@ -75,7 +110,7 @@ fetch(endPointBusqueda)
       busq += `
       
       <article class="Buscador" >
-      <a href="./detail.html">
+      <a href="./detail-artists.html">
       <ul class="ul-Buscador">
       <li >
         <h4>${titleS}</h4> 
