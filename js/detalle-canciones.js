@@ -43,6 +43,39 @@ generos7.addEventListener('mouseout', function() {
 
 // Hasta aca van los Hover del "a".
 
+// buscador 
+
+let form = document.querySelector('form')
+let inputdebusqueda= document.querySelector('input')
+
+form.addEventListener('submit', function(e){
+e.preventDefault()
+
+if(inputdebusqueda.value.length === 0 ){
+
+    alert("El campo esta vacio, por favor ingrese de vuelta su busqueda")
+
+    } 
+  
+  else {
+
+  if(inputdebusqueda.value.length < 3){
+
+    alert("El campo tiene menos de 3 carateres, por favor ingrese de vuelta su busqueda")
+
+  }
+  else { 
+      
+      this.submit() 
+  
+  }
+}
+})
+
+
+// buscador 
+
+
 
 // detalles
 

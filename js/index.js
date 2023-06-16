@@ -96,7 +96,7 @@ fetch(urlSongs)
     cancion += `
     
     <article class="canciones" >
-    <a href="./detail.html?id=${detalle}">
+    <a href="detalle-canciones.html?id=${detalle}">
     <ul class="ul-canciones">
     <li >
       <h4>${titleS}</h4> 
