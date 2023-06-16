@@ -63,20 +63,32 @@ fetch(endPointartistdetalle)
 .then(function (data) {
     console.log(data)
 
-//falta terminar 
+    let contenedor = document.querySelector(".jsSongs")
 
-    let busq =  
 
-    // esta todo linkiado, solo falta mostrarlo por pantalla
-      
-     
-      
+    let titleS = data.title;
+      let imageS = data.album.cover_medium;
+      let nartistas = data.artist.name;
+      let detalle = data.id
+
+
+    let cancion = `
+    <article class="canciones" >
     
-  
+    <ul class="ul-canciones">
+    <li >
+      <h4>${titleS}</h4> 
+      <img src="${imageS}">
+      <h5>${nartistas}</h5> 
+    </li>
+    </ul>
+    </article>
+    `;
 
-    document.querySelector(".jsdetailcan").innerHTML = busq;
 
-     
+    
+    contenedor.innerHTML = cancion;
+    
 })
 .catch(function (e) {
     console.log(e)
