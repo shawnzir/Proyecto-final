@@ -51,8 +51,38 @@ fetch(urlPlaylist)
 })
 .then(function(data){
   console.log(data);
+  let cancion = "";
+
+  for (let i = 0; i <  data.data.length; i++) {
+    let titleS = data.data[i].title;
+    let imageS = data.data[i].album.cover_medium;
+    let nartistas = data.data[i].artist.name;
+
+    cancion += `
+    
+    <article class="Playlist" >
+      <a href="./playlist.html">
+      <ul class="p-playlist">
+      <li >
+      <h4>${titleS}</h4> 
+      <img src="${imageS}">
+      <h5>${nartistas}</h5> 
+    </li>
+    </ul>
+    </a>
+    </article>
+    `;
+  }
+
+  document.querySelector(".jsPlaylist").innerHTML = cancion;
+
 })
 
 .catch(function(error){
   console.log("el error es:" + error)
 });
+
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}

@@ -85,7 +85,7 @@ fetch(urlSongs)
     cancion += `
     
     <article class="canciones" >
-    <a href="">
+    <a href="./detail.html">
     <ul class="ul-canciones">
     <li >
       <h4>${titleS}</h4> 
@@ -105,6 +105,7 @@ fetch(urlSongs)
   console.log("Error: " + error);
 })
 // Aca termina la API de Canciones
+
 
 // Aca arranca la API de Artistas
 
@@ -127,7 +128,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
             albums += `
             
             <article class="artistas">
-            <a href="">
+            <a href="./detail.html">
             <ul class="ul-artistas">
             <li>
             <h4>${titleA}</h4>
@@ -168,7 +169,7 @@ fetch(urlAlbum)
 
       info += `
       <article class="albums">
-      <a href="">
+      <a href="./detail.html">
       <ul class="ul-album">
       <li>
         <h4>${title}</h4> 
@@ -189,6 +190,10 @@ fetch(urlAlbum)
   .catch(function(error) {
     console.log("Error: " + error);
   });
-
+  
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
 // Aca termina la API de albumes.
 

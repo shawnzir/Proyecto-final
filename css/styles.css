@@ -10,6 +10,7 @@ body {
   background-color: #dddddd;
 }
 
+
 li {
 list-style: none;
 }
@@ -98,6 +99,11 @@ header nav {
   margin-left: 3%;
   margin-top: 100px;
   font-size: 200%;
+}
+.tit-playlist{
+  margin-left: 3%;
+  margin-top: 100px;
+  font-size: 70px;
 }
 
 .titleArtists {
@@ -255,7 +261,46 @@ border-radius: 1%;
 
 }
 
+/*BUSCADOR*/
+.tit-resultadodebusqueda{
+  
+  display: flex;
+  
+  font-size: 300%;
+}
 
+.Buscador{
+  
+  
+ 
+  display: flex;
+ 
+  flex-direction: row;
+  
+ 
+}
+
+.ul-Buscador{
+
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 10px 30px 20px;
+
+}
+
+.jssearch{
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  
+
+}
+
+
+/*BUSCADOR*/
 
 /*CONTENIDO*/
 
@@ -334,7 +379,6 @@ footer ul li {
 
   font-size: 50px;
   
-
 }
 
 }
@@ -436,12 +480,23 @@ footer ul li {
   padding: 10px 20px;
   font-size: 24px;
   font-weight: bold;
-
-
 }
 
 
+
 /*telefono*/
+}
+.dark-mode {
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
+.darkmode{
+  display: flex;
+  align-items: first baseline;
+  font-size: 20px;
+  margin: 30px;
+  margin-top: 10px;
+  border-color: black;
 }
 
 /*media queris*/

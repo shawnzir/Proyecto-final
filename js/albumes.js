@@ -61,3 +61,8 @@ let urlAlbumes = "https://api.deezer.com/album/302127"
   console.log("Error: " + error);
 });
 }
+
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
