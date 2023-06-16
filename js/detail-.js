@@ -82,6 +82,11 @@ fetch(endPointartistdetalle)
     console.log(e)
 })
 
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
 
 
 // si el array viene basyo podess con inner tex y if poner esto no tiene resultados

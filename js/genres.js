@@ -63,5 +63,10 @@ generos3.addEventListener('mouseout', function() {
     .catch(function(error) {
         console.log("Error:", error);
     })
+    
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
 
 

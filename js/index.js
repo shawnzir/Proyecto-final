@@ -191,6 +191,10 @@ fetch(urlAlbum)
   .catch(function(error) {
     console.log("Error: " + error);
   });
-
+  
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
 // Aca termina la API de albumes.
 

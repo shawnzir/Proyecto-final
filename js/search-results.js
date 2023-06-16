@@ -55,6 +55,7 @@ let datoabuscar =   qsToobjects.get("buscar") //necesito lo que el usuario escri
 let endPointBusqueda = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${datoabuscar}`
 
 
+let endpointbusqueda = "https://api.deezer.com/search?q=${datoabuscar}"
 
 fetch(endPointBusqueda)
 .then(function (response) {
