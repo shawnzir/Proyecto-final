@@ -135,12 +135,12 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
         for(let i = 0; i < informacion.data.length; i++){
             let titleA = informacion.data[i].name;
             let imageA = informacion.data[i].picture_medium
-            let detalleA = informacion.data[i].id
+            let detaAr = informacion.data[i].id
 
             albums += `
             
             <article class="artistas">
-            <a href="./detalle-generos.html?id=${detalleA}">
+            <a href="./detalle-artistas.html?id=${detaAr}">
             <ul class="ul-artistas">
             <li>
             <h4>${titleA}</h4>

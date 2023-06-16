@@ -42,48 +42,95 @@ generos4.addEventListener('mouseout', function() {
 });
 
 // Hasta aca van los Hover del "a".
+    
 
-// Detalles
+let qs =location.search;
+let qsObj = new URLSearchParams(qs);
+let id = qsObj.get('id')
+
+let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
+
+let endPointartistdetalleAlbum= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/albums`
 
 
-let queryString = location.search;
-let qsObject = new URLSearchParams(queryString);
-let id = qsObject.get('id')
 
-let endPointArtistDetalle = `https://api.deezer.com/artist/${id}`
+fetch(endPointartistdetalle)
 
-fetch(endPointArtistDetalle)
-.then(function(response) {
-  return response.json();
+.then(function(response){
+    return response.json();
 })
-.then(function(data){
-  console.log(data)
+.then(function (data) {
+    console.log(data)
 
-    let section = document.querySelector(".contenedor-artista")
+    let contenedor = document.querySelector(".jsartistas-sec")
+    console.log(contenedor);
 
-      let titleS = data.title;
-      let imageS = data.album.cover_medium;
-      let nArtistas = data.artist.name;
-      let album = data.album.title
+
+      
+      let imageS = data.picture_big;
+      let nArtistas = data.name;
+      
 
 
     let cancion = `
-    <article class="canciones" >
+    <article class="canciones-detalle" >
     
-    <ul class="ul-canciones">
-    <li >
-      <h5>Nombre De La Cancion: ${titleS}</h5> 
-      <h5>Nombre Del Artista: ${nArtistas}</h5> 
-      <h5>Nombre Del Album: ${album}</h5> 
-      <img src="${imageS}">
+    <ul class="ul-canciones-detalle">
+    <li class="img-detalle">
+      <img  src="${imageS}">
     </li>
+    <li >
+      
+      <h3>Nombre Del Artista: ${nArtistas}</h3> 
+      
+    </li>
+      
     </ul>
     </article>
     `;
 
 
     
-    section.innerHTML = cancion;
+    contenedor.innerHTML = cancion;
+    
+})
+.catch(function (e) {
+    console.log(e)
+})
+
+
+// OTRO FECH 
+// FALTA TERMINAR bien 
+fetch(endPointartistdetalleAlbum)
+
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    console.log(data)
+
+    let contenedor1 = document.querySelector(".Palbumes")
+    console.log(contenedor1);
+
+let albumes = ""
+
+    for(let i = 0; i < 5; i++){
+      
+      
+      let album = data.data[i].title
+
+
+      albumes += `
+    <li>
+      <h3>Nombre Del Album: ${album}</h3> 
+    </li>
+      
+   
+    `;
+
+    }
+    
+    contenedor1.innerHTML = albumes;
     
 })
 .catch(function (e) {
