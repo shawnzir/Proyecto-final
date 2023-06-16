@@ -80,7 +80,7 @@ if(inputdebusqueda.value.length === 0 ){
 // Detalles
 
 
-let qs =location.search;
+let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let id = qsObj.get('id')
 
