@@ -110,7 +110,7 @@ fetch(endPointBusqueda)
       busq += `
       
       <article class="Buscador" >
-      <a href="./detail.html">
+      <a href="./detail-artists.html">
       <ul class="ul-Buscador">
       <li >
         <h4>${titleS}</h4> 

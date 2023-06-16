@@ -45,7 +45,7 @@ generos.addEventListener('mouseout', function() {
 
 
 
-// Buscador que ande 
+// Buscador 
 
 let form = document.querySelector('form')
 let inputdebusqueda= document.querySelector('input')
@@ -139,7 +139,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
             albums += `
             
             <article class="artistas">
-            <a href="./detail.html">
+            <a href="./detail-genres.html">
             <ul class="ul-artistas">
             <li>
             <h4>${titleA}</h4>
@@ -180,7 +180,7 @@ fetch(urlAlbum)
 
       info += `
       <article class="albums">
-      <a href="./detail.html">
+      <a href="./detail-genres.html">
       <ul class="ul-album">
       <li>
         <h4>${title}</h4> 
