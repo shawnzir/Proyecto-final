@@ -9,7 +9,9 @@ body {
   font-size: 1rem;
   background-color: #dddddd;
 }
-
+a{
+  color: black;
+}
 
 li {
 list-style: none;
@@ -200,10 +202,6 @@ header nav {
 }
 /* canciones temporal*/
 
-a.effecto-canciones:hover{
-  color: aqua;
-
-}
 /* home canciones*/
 
 
@@ -488,10 +486,7 @@ footer ul li {
 
 /*telefono*/
 }
-.dark-mode {
-  background-color: rgb(36, 36, 36);
-  color: white;
-}
+
 .darkmode{
   display: flex;
   align-items: first baseline;
@@ -500,6 +495,26 @@ footer ul li {
   margin-top: 10px;
   border-color: black;
 }
+
+
+
+.dark-mode {
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
+
+.dark-mode a{
+color: white;
+}
+.dark-mode header nav{
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .toggle-dark{
+  color: white;
+}
+
 
 /*media queris*/
 

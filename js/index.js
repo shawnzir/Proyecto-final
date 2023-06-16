@@ -1,17 +1,15 @@
 // Hover del Index
 
-let home = document.querySelector(".navIndex")
-
+let home = document.querySelector(".toggle-dark")
 
 home.addEventListener('mouseover', function() {
     
-    home.style.color = '#979594'
+    home.style.color = 'grey' 
   });
 
 home.addEventListener('mouseout', function() {
 
-    home.style.color = 'black'
-});
+    home.style.color = 'black'})
 
 // Hover de Canciones
 
@@ -96,7 +94,7 @@ fetch(urlSongs)
     cancion += `
     
     <article class="canciones" >
-    <a href="./detail-canciones.html?id=${detalle}">
+    <a href="detalle-canciones.html?id=${detalle}">
     <ul class="ul-canciones">
     <li >
       <h4>${titleS}</h4> 
@@ -203,7 +201,7 @@ fetch(urlAlbum)
   });
 
   function myFunction() {
-    var element = document.body;
+    let element = document.body;
     element.classList.toggle("dark-mode");
   }
 // Aca termina la API de albumes.
