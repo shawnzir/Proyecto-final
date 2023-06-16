@@ -81,11 +81,12 @@ fetch(urlSongs)
     let titleS = data.data[i].title;
     let imageS = data.data[i].album.cover_medium;
     let nartistas = data.data[i].artist.name;
+    let detalle = data.data[i].id
 
     cancion += `
     
     <article class="canciones" >
-    <a href="./detail-canciones.html">
+    <a href="./detail.html?id=${detalle}">
     <ul class="ul-canciones">
     <li >
       <h4>${titleS}</h4> 
@@ -190,6 +191,10 @@ fetch(urlAlbum)
   .catch(function(error) {
     console.log("Error: " + error);
   });
-
+  
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
 // Aca termina la API de albumes.
 

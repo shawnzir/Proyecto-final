@@ -45,4 +45,24 @@ generos5.addEventListener('mouseout', function() {
 
 // Albumes con las APIS
 
-let urlAlbumes = ""
+let urlAlbumes = "https://api.deezer.com/album/302127"
+
+{
+  fetch(urlAlbumes) 
+  .then(function(response) {
+  
+  return response.json()
+})
+  .then(function(data) {
+  console.log(data);
+})
+
+.catch(function(error) {
+  console.log("Error: " + error);
+});
+}
+
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
