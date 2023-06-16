@@ -178,10 +178,11 @@ fetch(urlAlbum)
     for (let i = 0; i < data.data.length; i++) {
       let title = data.data[i].title;
       let image = data.data[i].cover_medium;
+      let detaDisc = data.data[i].id
 
       info += `
       <article class="albums">
-      <a href="./detalle-generos.html">
+      <a href="./detalle-albumes.html?id=${detaDisc}">
       <ul class="ul-album">
       <li>
         <h4>${title}</h4> 

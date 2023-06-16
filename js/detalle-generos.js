@@ -42,3 +42,51 @@ generos.addEventListener('mouseout', function() {
 });
 
 // Hasta aca van los Hover del "a".
+
+
+let qs =location.search;
+let qsObj = new URLSearchParams(qs);
+let id = qsObj.get('id')
+
+let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
+
+
+
+fetch(endPointartistdetalle)
+
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    console.log(data)
+
+    let contenedor = document.querySelector(".jsgenere")
+    console.log(contenedor);
+
+
+      let titleS = data.name;
+      
+
+
+    let cancion = `
+    <article class="genero-detalle" >
+    
+    <ul class="ul-genero-detalle">
+    <li >
+      <h3>Nombre De el genero: ${titleS}</h3> 
+      
+      
+    </li>
+      
+    </ul>
+    </article>
+    `;
+
+
+    
+    contenedor.innerHTML = cancion;
+    
+})
+.catch(function (e) {
+    console.log(e)
+})

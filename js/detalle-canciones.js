@@ -84,7 +84,9 @@ let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let id = qsObj.get('id')
 
-let endPointartistdetalle = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
+
+let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
+
 
 
 
