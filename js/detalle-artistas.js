@@ -56,7 +56,7 @@ let endPointartistdetalleAlbum= `https://cors-anywhere.herokuapp.com/https://api
 
 fetch(endPointartistdetalle)
 
-.then(function (response) {
+.then(function(response){
     return response.json();
 })
 .then(function (data) {

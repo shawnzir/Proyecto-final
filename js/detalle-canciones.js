@@ -80,11 +80,13 @@ if(inputdebusqueda.value.length === 0 ){
 // Detalles
 
 
-let qs =location.search;
+let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let id = qsObj.get('id')
 
+
 let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
+
 
 
 
@@ -97,13 +99,11 @@ fetch(endPointartistdetalle)
     console.log(data)
 
     let contenedor = document.querySelector(".jsCanciones")
-    console.log(contenedor);
-
 
       let titleS = data.title;
       let imageS = data.album.cover_big;
       let nArtistas = data.artist.name;
-      let album = data.album.title
+      let album = data.album.title;
 
 
     let cancion = `
