@@ -96,7 +96,7 @@ fetch(urlSongs)
     cancion += `
     
     <article class="canciones" >
-    <a href="./detail-canciones.html?id=${detalle}">
+    <a href="./detalle-canciones.html?id=${detalle}">
     <ul class="ul-canciones">
     <li >
       <h4>${titleS}</h4> 
@@ -139,7 +139,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
             albums += `
             
             <article class="artistas">
-            <a href="./detail-genres.html">
+            <a href="./detalle-generos.html">
             <ul class="ul-artistas">
             <li>
             <h4>${titleA}</h4>
@@ -180,7 +180,7 @@ fetch(urlAlbum)
 
       info += `
       <article class="albums">
-      <a href="./detail-genres.html">
+      <a href="./detalle-generos.html">
       <ul class="ul-album">
       <li>
         <h4>${title}</h4> 
