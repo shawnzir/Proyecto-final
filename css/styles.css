@@ -197,17 +197,19 @@ header nav {
   background-color: #b8b5b5;
   margin: 10px;
   padding: 10px 30px 20px;
+}
+/* canciones temporal*/
+
+a.effecto-canciones:hover{
+  color: aqua;
 
 }
-
 /* home canciones*/
 
 
 /* home artistas*/
 .artistas{
   
-  
- 
   display: flex;
  
   flex-direction: row;

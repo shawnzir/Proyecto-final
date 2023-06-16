@@ -24,7 +24,7 @@ playlist.addEventListener('mouseover', function() {
 
 playlist.addEventListener('mouseout', function() {
 
-    playlist.style.color = 'black'
+    playlist.style.color = "black"
 });
 
 // Hover de Generos
@@ -191,7 +191,7 @@ fetch(urlAlbum)
   .catch(function(error) {
     console.log("Error: " + error);
   });
-  
+
   function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");

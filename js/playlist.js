@@ -58,7 +58,7 @@ fetch(urlPlaylist)
     let imageS = data.data[i].album.cover_medium;
     let nartistas = data.data[i].artist.name;
 
-    cancion += `
+    cancion +=` 
     
     <article class="Playlist" >
       <a href="./playlist.html">
@@ -86,3 +86,7 @@ function myFunction() {
   var element = document.body;
   element.classList.toggle("dark-mode");
 }
+
+// Agregar a favoritos
+
+
