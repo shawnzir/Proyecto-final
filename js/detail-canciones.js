@@ -53,11 +53,11 @@ let qsToobjects = new URLSearchParams(qs);
 let datoabuscar =   qsToobjects.get("buscar") //necesito lo que el usuario escribo en el imput
 
 
-let endPointBusqueda = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${datoabuscar}`
+let urlDetalle = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${datoabuscar}` // End Point
 
 
 
-fetch(endPointBusqueda)
+fetch(urlDetalle)
 .then(function (response) {
     return response.json();
 })
@@ -74,9 +74,9 @@ fetch(endPointBusqueda)
   
       busq += `
       
-      <article class="Buscador" >
-      <a href="./detail.html">
-      <ul class="ul-Buscador">
+      <article class="ul-detalle-artistas" >
+      <a href="./detail-canciones.html">
+      <ul class="ul-detalle-artistas">
       <li >
         <h4>${titleS}</h4> 
         <h6>${nartistas}</h6> 

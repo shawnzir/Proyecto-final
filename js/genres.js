@@ -54,8 +54,8 @@ generos3.addEventListener('mouseout', function() {
 
         for(let i = 1; i < informacion.data.length; i++){
 
-            let genre ="<a href='./detail.html'>"+ "<h2>" + informacion.data[i].name + "</h2>"+"</a>";
-            genre += "<a href='./detail.html'>"+"<img src=" + informacion.data[i].picture_medium + ">"+"</a>"
+            let genre ="<a href='./detail-genres.html'>"+ "<h2>" + informacion.data[i].name + "</h2>"+"</a>";
+            genre += "<a href='./detail-genres.html'>"+"<img src=" + informacion.data[i].picture_medium + ">"+"</a>"
 
             document.querySelector(".content").innerHTML += "<article class='Generos-data'>" + genre + "</article>"
         }
