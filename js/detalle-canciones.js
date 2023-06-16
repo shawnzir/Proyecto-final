@@ -84,11 +84,11 @@ let qs =location.search;
 let qsObj = new URLSearchParams(qs);
 let id = qsObj.get('id')
 
-let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
+let endPointTrackDetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
 
 
 
-fetch(endPointartistdetalle)
+fetch(endPointTrackDetalle)
 
 .then(function (response) {
     return response.json();
@@ -97,8 +97,6 @@ fetch(endPointartistdetalle)
     console.log(data)
 
     let contenedor = document.querySelector(".jsCanciones")
-    console.log(contenedor);
-
 
       let titleS = data.title;
       let imageS = data.album.cover_medium;
