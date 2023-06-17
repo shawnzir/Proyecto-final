@@ -83,12 +83,7 @@ if(inputdebusqueda.value.length === 0 ){
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let id = qsObj.get('id')
-
-
 let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
-
-
-
 
 fetch(endPointartistdetalle)
 
@@ -97,15 +92,12 @@ fetch(endPointartistdetalle)
 })
 .then(function (data) {
     console.log(data)
-
     let contenedor = document.querySelector(".jsCanciones")
-
       let titleS = data.title;
       let imageS = data.album.cover_big;
       let nArtistas = data.artist.name;
       let album = data.album.title;
-      let audio = data.preview
-
+      let audio = data.previewl;
 
     let cancion = `
     <article class="canciones-detalle" >
@@ -120,21 +112,13 @@ fetch(endPointartistdetalle)
       <h3>Nombre Del Album: ${album}</h3>     
 <audio controls>
 <source src="${audio}" type="audio/ogg">
-
 </audio>
-
-
-
+<div class="mis-favs"><a href="./playlist.html">Ir a Favoritos</a></div>
     </li>
-      
     </ul>
     </article>
     `;
-
-
-    
     contenedor.innerHTML = cancion;
-    
 })
 .catch(function (e) {
     console.log(e)
@@ -148,43 +132,29 @@ function myFunction() {
 // Detalles
 
 // Agregar a favoritos
+let botonFavs = document.querySelector('.favoritos');
+let playlist = [];
+let recuperoStorage = localStorage.getItem('playlist');
+let storageToArray = JSON.parse(recuperoStorage)
 
-let linkFavs = document.querySelector(".aLinkFavs")
-
-let recuperoStorage = localStorage.getItem('listaFavoritos');
-
-let storageToArray = JSON.parse(recuperoStorage);
-
-let temasFavs = [];
-
-if(recuperoStorage !== null){
-    temasFavs = storageToArray
+if (recuperoStorage != null) {
+    playlist = storageToArray;
 }
 
-//Cambiar agregar por quitar
-if(temasFavs.includes(id)){
-    linkFavs.innerText = "Quitar de favoritos" 
+if (playlist.includes(id)) {
+    botonFavs.innerText = 'Quitar de Favoritos'
 }
 
-
-linkFavs.addEventListener('click', function(e){
-    e.preventDefault();
-    //Preguintar si un elemento está en el array
-    if(temasFavs.includes(id)){
-        
-        //Si el elemento ya está entonces que lo saque.
-        let posicion = temasFavs.indexOf(id);
-        temasFavs.splice(posicion, 1);
-        linkFavs.innerText = "Agregar a favoritos";
-
+botonFavs.addEventListener("click", function () {
+    if (playlist.includes(id)) {
+        let indice = playlist.indexOf(id)
+        playlist.splice(indice, 1);
+        botonFavs.innerText = 'Agregar a favoritos'
     } else {
-        //Cambiar agregar por quitar
-        gifFavoritos.push(id);
-        linkFavs.innerText = "Quitar de favoritos";
+        playlist.push(id);
+        botonFavs.innerText = 'Quitar de favoritos'
     }
 
-    temasAJson = JSON.stringify(temasFavs);
-    localStorage.setItem("listaFavoritos", temasAJson)
-
-    console.log(localStorage);
+    let favoritosToString = JSON.stringify(playlist);
+    localStorage.setItem('playlist', favoritosToString)
 })

@@ -309,12 +309,65 @@ border-radius: 1%;
 
 margin-top: 80px;
 display: flex;
-justify-content: center
-
-
-
-
+justify-content: center;
 }
+
+.jsCanciones {
+    padding: 3vw 10vw;
+    border-radius: 2%;
+}
+
+.article-detalle-cancion {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 10vw;
+  padding: 3vw 0vw 3vw 0vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.agregar-sacar-favs {
+  display: flex;
+  padding: 2vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mis-favs {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.favs {
+  padding: 0.1vw 0.5vw;
+  font-weight: bold;
+}
+
+.informacion-canciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-playlist {
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 10px 30px 20px;
+  align-items: center;
+}
+
+.playlist {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 .canciones-detalle{
 
@@ -401,22 +454,18 @@ display: flex;
 
 }
 
-
-
 /*genero detalle*/
-
-.divLinkFavs {
-  width: 100%;
-}
-.aLinkFavs {
-  font-size: 1000px;
-}
 
 
 
 /* DETALLE CANCIONES*/
-
-
+.a-link-favs {
+  width: 140px;
+  height: 200px;
+  margin-left: -260px;
+  margin-top: 300px;
+  margin-right: 0px;
+  }
 /*CONTENIDO*/
 
 /*desde aca*/
