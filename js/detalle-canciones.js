@@ -104,6 +104,7 @@ fetch(endPointartistdetalle)
       let imageS = data.album.cover_big;
       let nArtistas = data.artist.name;
       let album = data.album.title;
+      let audio = data.preview
 
 
     let cancion = `
@@ -115,8 +116,15 @@ fetch(endPointartistdetalle)
     </li>
     <li>
       <h3>Nombre De La Cancion: ${titleS}</h3> 
-      <h3>Nombre Del Artista: ${nArtistas}</h3> 
-      <h3>Nombre Del Album: ${album}</h3> 
+      <h3>Nombre Del Artista ${nArtistas}</h3>
+      <h3>Nombre Del Album: ${album}</h3>     
+<audio controls>
+<source src="${audio}" type="audio/ogg">
+
+</audio>
+
+
+
     </li>
       
     </ul>

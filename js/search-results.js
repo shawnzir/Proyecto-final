@@ -106,11 +106,12 @@ fetch(endPointBusqueda)
       let titleS = data.data[i].title;
       let imageS = data.data[i].album.cover_medium;
       let nartistas = data.data[i].artist.name;
+      let detaDisc = data.data[i].id
   
       busq += `
       
       <article class="Buscador" >
-      <a href="./detalle-artistas.html">
+      <a href="./detalle-canciones.html?id=${detaDisc}">
       <ul class="ul-Buscador">
       <li >
         <h4>${titleS}</h4> 

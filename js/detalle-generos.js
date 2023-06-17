@@ -50,6 +50,8 @@ let id = qsObj.get('id')
 
 let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
 
+let endArtistasGeneros = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`
+
 
 
 fetch(endPointartistdetalle)
@@ -73,7 +75,7 @@ fetch(endPointartistdetalle)
     
     <ul class="ul-genero-detalle">
     <li >
-      <h3>Nombre De el genero: ${titleS}</h3> 
+      <h2>Nombre De el genero: ${titleS}</h2> 
       
       
     </li>
@@ -90,3 +92,33 @@ fetch(endPointartistdetalle)
 .catch(function (e) {
     console.log(e)
 })
+
+fetch(endArtistasGeneros)
+
+.then(function (response) {
+  return response.json()
+  
+})
+
+.then (function (data) {
+console.log(data)
+  
+let contenedor2 = document.querySelector(".Nombre-artsistasg")
+
+let artistasgenero = ""
+
+for (let i = 0; i < 5; i++) {
+  
+  let arraysgen = data.data[i].name
+  let arraysgenp = data.data[i].picture
+
+artistasgenero+=`
+
+  <h3>Artistas Del Genero: ${arraysgen}</h3>
+  <img src="${arraysgenp}">
+  `
+
+    
+
+  contenedor2.innerHTML = artistasgenero
+}})

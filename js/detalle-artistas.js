@@ -62,32 +62,21 @@ fetch(endPointartistdetalle)
 .then(function (data) {
     console.log(data)
 
-    let contenedor = document.querySelector(".jsartistas-sec")
+    let contenedor = document.querySelector(".ul-artistas-detalle2")
     console.log(contenedor);
 
 
       
-      let imageS = data.picture_big;
+      let imageS = data.picture_medium;
       let nArtistas = data.name;
       
 
 
     let cancion = `
-    <article class="canciones-detalle" >
-    
-    <ul class="ul-canciones-detalle">
     <li class="img-detalle">
-      <img  src="${imageS}">
-    </li>
-    <li >
-      
-      <h3>Nombre Del Artista: ${nArtistas}</h3> 
-      
-    </li>
-      
-    </ul>
-    </article>
-    `;
+              <img  src="${imageS}">
+              <h3>Nombre Del Artista: ${nArtistas}</h3>
+            </li>`;
 
 
     
@@ -109,7 +98,7 @@ fetch(endPointartistdetalleAlbum)
 .then(function (data) {
     console.log(data)
 
-    let contenedor1 = document.querySelector(".Palbumes")
+    let contenedor1 = document.querySelector(".jsartistas-sec")
     console.log(contenedor1);
 
 let albumes = ""
@@ -120,10 +109,15 @@ let albumes = ""
       let album = data.data[i].title
 
 
-      albumes += `
-    <li>
-      <h3>Nombre Del Album: ${album}</h3> 
-    </li>
+      albumes += `<article class="Palbumes">
+
+      <li>
+      <h2>Albums</h2>
+      <h3> ${data.data[i].title}</h3> 
+      </li>
+
+      </article>
+   
       
    
     `;
