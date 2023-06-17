@@ -94,36 +94,40 @@ if(recuperoStorage !== undefined|| favoritos.length !==0){
     .then(function (data) {
       console.log(data);
 
-  for (let i = 0; i <  data.data.length; i++) {
-    let titleS = data.data[i].title;
-    let imageS = data.data[i].album.cover_medium;
-    let nartistas = data.data[i].artist.name;
+      let titleS = data.title
+      let albumCover = data.album.cover_medium
+      let id = data.id
+      let albumId = data.album.id
+      let albumTitle = data.album.title
+      let artistId = data.artist.id
+      let artistName = data.artist.name
 
-    cancion += `
+      misFavoritos += `<article class= "content-playlist"> 
+      <h3>
+      <a class="nombre-cancion" href="./detalle-canciones.html?id=${id}">${titleS}</a>
+      </h3>
+      <a class="nombre-cancion" href="./detalle-canciones.html?id=${id}">
+      <img src="${albumCover}" alt="${titleS}">
+      </a>
+      <article class="informacion-canciones">
+      <a href="./detalle-albumes.html?id=${albumId}">${albumTitle}</a>
+      <a href="./detalle-artistas.html?id=${artistId}">${artistName}</a> 
+      </article>
+            </article>`
+            contenedorFavs.innerHTML = misFavoritos
     
-    <article class="Playlist" >
-      <a href="./playlist.html">
-      <ul class="p-playlist">
-      <li >
-      <h4>${titleS}</h4> 
-      <img src="${imageS}">
-      <h5>${nartistas}</h5> 
-    </li>
-    </ul>
-    </a>
-    </article>
-    `;
-  }
-
-  document.querySelector(".jsPlaylist").innerHTML = cancion;
-
-})
+        })
+        .catch(function (e) {
+            console.log(e);
+        })
+    }
+}
 
 if(favoritos.length ==0){
     contenedorFavs.innerHTML= "<h2> No se encontraron favoritos</h2>" 
 }
 
 function myFunction() {
-  let element = document.body;
+  var element = document.body;
   element.classList.toggle("dark-mode");
-}
+} 
