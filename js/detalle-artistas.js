@@ -111,8 +111,9 @@ let albumes = ""
 
       albumes += `<article class="Palbumes">
 
+
+        
       <li>
-      <h2>Albums</h2>
       <h3> ${data.data[i].title}</h3> 
       </li>
 

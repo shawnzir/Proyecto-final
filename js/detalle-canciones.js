@@ -97,7 +97,7 @@ fetch(endPointartistdetalle)
       let imageS = data.album.cover_big;
       let nArtistas = data.artist.name;
       let album = data.album.title;
-      let audio = data.previewl;
+      let audio = data.preview;
 
     let cancion = `
     <article class="canciones-detalle" >
