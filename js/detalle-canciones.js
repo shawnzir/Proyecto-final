@@ -136,19 +136,47 @@ function myFunction() {
   var element = document.body;
   element.classList.toggle("dark-mode");
 }
+// Si el array viene vacio podes con inner text e if poner esto no tiene resultados.
+// Detalles
+
+// Agregar a favoritos
+
+let linkFavs = document.querySelector(".aLinkFavs")
+
+let recuperoStorage = localStorage.getItem('listaFavoritos');
+
+let storageToArray = JSON.parse(recuperoStorage);
+
+let temasFavs = [];
+
+if(recuperoStorage !== null){
+    temasFavs = storageToArray
+}
+
+//Cambiar agregar por quitar
+if(temasFavs.includes(id)){
+    linkFavs.innerText = "Quitar de favoritos" 
+}
 
 
+linkFavs.addEventListener('click', function(e){
+    e.preventDefault();
+    //Preguintar si un elemento está en el array
+    if(temasFavs.includes(id)){
+        
+        //Si el elemento ya está entonces que lo saque.
+        let posicion = temasFavs.indexOf(id);
+        temasFavs.splice(posicion, 1);
+        linkFavs.innerText = "Agregar a favoritos";
 
-// si el array viene basyo podess con inner tex y if poner esto no tiene resultados
+    } else {
+        //Cambiar agregar por quitar
+        gifFavoritos.push(id);
+        linkFavs.innerText = "Quitar de favoritos";
+    }
 
+    temasAJson = JSON.stringify(temasFavs);
+    localStorage.setItem("listaFavoritos", temasAJson)
 
-
-
-
-
-
-
-
-
-
-// detalles
+    console.log(localStorage);
+})
