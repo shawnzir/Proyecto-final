@@ -87,10 +87,25 @@ if(inputdebusqueda.value.length === 0 ){
     .then(function(informacion) { // El parametro "informacion", recibe la informacion decodificada gracias al primer then. Dentro de esta funcion escribiremos el codigo para poder trabajar con la informacion obtenida del API.
         console.log(informacion.data)
 
+        
+
         for(let i = 1; i < informacion.data.length; i++){
 
-            let genre ="<a href='./detalle-generos.html'>"+ "<h2>" + informacion.data[i].name + "</h2>"+"</a>";
-            genre += "<a href='./detalle-generos.html'>"+"<img src=" + informacion.data[i].picture_medium + ">"+"</a>"
+            let detaAr = informacion.data[i].id
+            let pic = informacion.data[i].picture_medium
+            let nombreg = informacion.data[i].name
+
+
+            let genre = `<article class="artistas">
+            <a href="./detalle-generos.html?id=${detaAr}">
+            <ul class="ul-artistas">
+            <li>
+            <h4>${nombreg}</h4>
+            <img src="${pic}"> 
+            </li>
+            </ul>
+            </a>
+            </article>`
 
             document.querySelector(".content").innerHTML += "<article class='Generos-data'>" + genre + "</article>"
         }

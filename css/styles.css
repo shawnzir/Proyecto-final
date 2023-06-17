@@ -302,6 +302,170 @@ border-radius: 1%;
 
 /*BUSCADOR*/
 
+
+/* DETALLE CANCIONES*/
+
+.tit-detalle{
+
+margin-top: 80px;
+display: flex;
+justify-content: center;
+}
+
+.jsCanciones {
+    padding: 3vw 10vw;
+    border-radius: 2%;
+}
+
+.article-detalle-cancion {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 10vw;
+  padding: 3vw 0vw 3vw 0vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.agregar-sacar-favs {
+  display: flex;
+  padding: 2vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mis-favs {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.favs {
+  padding: 0.1vw 0.5vw;
+  font-weight: bold;
+}
+
+.informacion-canciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-playlist {
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 10px 30px 20px;
+  align-items: center;
+}
+
+.playlist {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.canciones-detalle{
+
+  margin-top: 1%;
+  margin-bottom: 6%;
+  display: flex;
+ 
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.ul-canciones-detalle{
+
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 30px 40px 20px;
+  display: flex;
+
+
+}
+.ul-canciones-detalle2{
+
+  
+  display: flex;
+
+
+}
+
+.img-detalle{
+
+  margin-right: 10px;
+
+}
+
+/* detalle artista*/
+
+.ul-artistas-detalle2{
+
+display: flex;
+justify-content: center;
+
+
+}
+
+.ul-artistas-detalle{
+
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 30px 40px 20px;
+  display: flex;
+
+
+}
+
+/*artista*/
+
+
+/*genero detalle*/
+
+.se-generos{
+
+  display: flex;
+  background-color: #b8b5b5;
+  margin: 10px;
+  padding: 30px 40px 20px;
+
+
+}
+
+.jsgenere{
+
+display: flex;
+
+}
+
+.Nombre-artsistasg{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+/*genero detalle*/
+
+
+
+/* DETALLE CANCIONES*/
+.a-link-favs {
+  width: 140px;
+  height: 200px;
+  margin-left: -260px;
+  margin-top: 300px;
+  margin-right: 0px;
+  }
 /*CONTENIDO*/
 
 /*desde aca*/

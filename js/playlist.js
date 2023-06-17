@@ -40,8 +40,9 @@ generos1.addEventListener('mouseout', function() {
 
     generos1.style.color = 'black'
 });
+// Hasta aca van los Hover del "a".
 
-//buscador 
+// Arranca el Buscador
 
 let form = document.querySelector('form')
 let inputdebusqueda= document.querySelector('input')
@@ -69,29 +70,36 @@ if(inputdebusqueda.value.length === 0 ){
   }
 }
 })
+// Aca termina el Buscador
+
+// Aca arranca 
 
 
-//buscador
+let recuperoStorage = localStorage.getItem("playlist");
+let storageToArray = JSON.parse(recuperoStorage); 
+let favoritos = storageToArray
 
+let contenedorFavs= document.querySelector(".playlist");
+let misFavoritos = "";
 
-// Hasta aca van los Hover del "a".
-
-let urlPlaylist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/27"
-
-fetch(urlPlaylist)
-.then(function(response){
-  return response.json();
-})
-.then(function(data){
-  console.log(data);
-  let cancion = "";
+if(recuperoStorage !== undefined|| favoritos.length !==0){
+  for (let i=0; i<favoritos.length; i++){
+    console.log(favoritos[i]);
+    
+    let urlFavs=  `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${favoritos[i]}`
+    fetch(urlFavs)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
 
   for (let i = 0; i <  data.data.length; i++) {
     let titleS = data.data[i].title;
     let imageS = data.data[i].album.cover_medium;
     let nartistas = data.data[i].artist.name;
 
-    cancion +=` 
+    cancion += `
     
     <article class="Playlist" >
       <a href="./playlist.html">
@@ -111,15 +119,11 @@ fetch(urlPlaylist)
 
 })
 
-.catch(function(error){
-  console.log("el error es:" + error)
-});
+if(favoritos.length ==0){
+    contenedorFavs.innerHTML= "<h2> No se encontraron favoritos</h2>" 
+}
 
 function myFunction() {
   let element = document.body;
   element.classList.toggle("dark-mode");
 }
-
-// Agregar a favoritos
-
-

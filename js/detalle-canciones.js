@@ -80,13 +80,10 @@ if(inputdebusqueda.value.length === 0 ){
 // Detalles
 
 
-let qs =location.search;
+let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let id = qsObj.get('id')
-
 let endPointartistdetalle= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
-
-
 
 fetch(endPointartistdetalle)
 
@@ -95,35 +92,33 @@ fetch(endPointartistdetalle)
 })
 .then(function (data) {
     console.log(data)
-
     let contenedor = document.querySelector(".jsCanciones")
-    console.log(contenedor);
-
-
       let titleS = data.title;
-      let imageS = data.album.cover_medium;
+      let imageS = data.album.cover_big;
       let nArtistas = data.artist.name;
-      let album = data.album.title
-
+      let album = data.album.title;
+      let audio = data.previewl;
 
     let cancion = `
-    <article class="canciones" >
+    <article class="canciones-detalle" >
     
-    <ul class="ul-canciones">
-    <li >
-      <h5>Nombre De La Cancion: ${titleS}</h5> 
-      <h5>Nombre Del Artista: ${nArtistas}</h5> 
-      <h5>Nombre Del Album: ${album}</h5> 
-      <img src="${imageS}">
+    <ul class="ul-canciones-detalle">
+    <li class="img-detalle">
+      <img  src="${imageS}">
+    </li>
+    <li>
+      <h3>Nombre De La Cancion: ${titleS}</h3> 
+      <h3>Nombre Del Artista ${nArtistas}</h3>
+      <h3>Nombre Del Album: ${album}</h3>     
+<audio controls>
+<source src="${audio}" type="audio/ogg">
+</audio>
+<div class="mis-favs"><a href="./playlist.html">Ir a Favoritos</a></div>
     </li>
     </ul>
     </article>
     `;
-
-
-    
     contenedor.innerHTML = cancion;
-    
 })
 .catch(function (e) {
     console.log(e)
@@ -133,19 +128,33 @@ function myFunction() {
   var element = document.body;
   element.classList.toggle("dark-mode");
 }
+// Si el array viene vacio podes con inner text e if poner esto no tiene resultados.
+// Detalles
 
+// Agregar a favoritos
+let botonFavs = document.querySelector('.favoritos');
+let playlist = [];
+let recuperoStorage = localStorage.getItem('playlist');
+let storageToArray = JSON.parse(recuperoStorage)
 
+if (recuperoStorage != null) {
+    playlist = storageToArray;
+}
 
-// si el array viene basyo podess con inner tex y if poner esto no tiene resultados
+if (playlist.includes(id)) {
+    botonFavs.innerText = 'Quitar de Favoritos'
+}
 
+botonFavs.addEventListener("click", function () {
+    if (playlist.includes(id)) {
+        let indice = playlist.indexOf(id)
+        playlist.splice(indice, 1);
+        botonFavs.innerText = 'Agregar a favoritos'
+    } else {
+        playlist.push(id);
+        botonFavs.innerText = 'Quitar de favoritos'
+    }
 
-
-
-
-
-
-
-
-
-
-// detalles
+    let favoritosToString = JSON.stringify(playlist);
+    localStorage.setItem('playlist', favoritosToString)
+})

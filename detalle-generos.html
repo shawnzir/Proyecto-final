@@ -23,11 +23,12 @@
                     <a href="playlist.html" class="navPlaylist">Playlist</a>
                 </li>
                 <li>
-                    <a href="genres.html" class="navGenres">Genres</a>
+                    <a href="genres.html" class="navGenres">Generos</a>
                 </li>
                 <li>
-                    <form class="buscador" action="" method="get">
+                    <form class="buscador" action="search-results.html" method="GET">
                         <input type="text" name="buscar" value="" placeholder="">
+                        <button type="submit">🔍︎</button>
                     </form>
                 </li>
             </ul>
@@ -35,6 +36,18 @@
     </header>
     <div class="div-detalle-generos">
         <h1> Detalle de los generos</h1>
+    <section class="se-generos">
+    
+        <ul class="jsgenere"></ul>
+
+        <ul class="Nombre-artsistasg"> </ul>
+
+
+    </section>
+    
+
+
+
         <button class="darkmode" onclick="myFunction()">Dark Mode</button>
     </div>
     <footer>
@@ -44,10 +57,7 @@
             <li class="li-menu"><a href="#albums">Albums</a></li>
             <li class="li-menu"><a href="#artists">Artists</a></li>
             
-        </ul>
-        <div>
-            <h3>Creado por Bautista Lignini - Piki Poggio - Shawn Zir &#169; 2023</h3>
-        </div>
+        
     </footer>
 
 <script src="./js/detalle-generos.js"></script>
